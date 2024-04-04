@@ -3,7 +3,7 @@
 ## Introduction
 Welcome to my Symfony-based website. This project is made to show various features in course MVC at BTH university. Below, you’ll find instructions on how to get started.
 
-![Composer](symfony/.img/logo-composer-transparent5.png)
+![Composer](public/img/logo-composer-transparent5.png)
 
 ## Getting Started
 1. **Clone the Repository:**
