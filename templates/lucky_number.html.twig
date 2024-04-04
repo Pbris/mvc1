@@ -5,7 +5,11 @@
 {% block title %}Magic number{% endblock %}
 
 {% block body %}
-    <h1>Magic number</h1>
-    <p>Welcome to my awesome magical homepage.</p>
-    <p>This is the current magic number: {{ number }}</p>
+    <div style="background-image: url('{{ asset('build/images/background.jpg') }}'); background-size: cover; background-position: center; min-height: 100vh;">
+        <h1>Magic number</h1>
+        <p>Welcome to my magical homepage.</p>
+        <p class="rainbow-text">
+        This is the current magic number: {{ number }}
+        </p>
+    </div>
 {% endblock %}

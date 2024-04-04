@@ -1,0 +1,55 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class RouteControllerTwig extends AbstractController
+{
+    #[Route("/lucky", name: "lucky_number")]
+    public function number(): Response
+    {
+        $number = random_int(0, 100);
+
+        $data = [
+            'number' => $number
+        ];
+
+        return $this->render('lucky_number.html.twig', $data);
+    }
+
+    #[Route("/presentation", name: "presentation")]
+    public function presentation(): Response
+    {
+        return $this->render('presentation.html.twig');
+    }
+
+    #[Route("/about", name: "about")]
+    public function about(): Response
+    {
+        return $this->render('about.html.twig');
+    }
+
+    #[Route("/report", name: "report")]
+    public function report(): Response
+    {
+        return $this->render('report.html.twig');
+    }
+    #[Route("/api", name: "api_landing")]
+    public function landingPage(): Response
+    {
+        $jsonRoutes = [
+            [
+                'path' => '/api/quote',
+                'description' => 'Get random quote',
+            ]
+        ];
+        return $this->render('api_landing.html.twig', [
+            'jsonRoutes' => $jsonRoutes,
+        ]);
+    }
+
+
+}

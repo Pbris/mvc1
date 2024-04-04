@@ -3,12 +3,23 @@
 {% block title %}About{% endblock %}
 
 {% block body %}
+<div class="two-col-layout">
+<main class="main">
     <h1>About</h1>
-    <p>An image which can be clicked on.</p>
-    <a href="{{ asset('img/glider.svg') }}">
-        <img src="{{ asset('img/glider.svg') }}" alt="">
+    <p>"Kursen Objektorienterade webbteknologier, a.k.a. mvc, fokuserar på objektorienterade programmeringstekniker i programmeringsspråket PHP. Klassiska objektorienterade konstruktioner hanteras tillsammans med objektorienterad programmering i webbaserat ramverk tillsammans med databaser samt enhetstestning."</p>
+    <a href="{{ asset('img/web.jpg') }}">
+        <img src="{{ asset('img/web.jpg') }}" alt="" style="max-width: 400px;">
     </a>
+    </main>
 
-    <img src="{{ asset('build/images/background.jpg') }}" alt="">
+        <aside class="aside">
+        <h4>Kursen</h4>
+        <ul>
+        <li><a href="https://github.com/dbwebb-se/webtec">Kursens repo, GitHub</a></li>
+        <li><a href="https://github.com/Pbris/mvc1">Webbplatsens repo</a></li>
+                
+        </ul>
+    </aside>
+</div>
 
 {% endblock %}
