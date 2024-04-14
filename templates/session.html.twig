@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+<p><a href="{{ path('session_destroy') }}">Destroy Session</a></p>
+
+{{ include('flash.html.twig') }}
+
+<p>Name of session: '{{ sessionName }}'</p>
+
+<p>Id of session: '{{ sessionId }}'</p>
+
+<p>Details of session cookie:</p>
+<pre>{{ sessionCookie | json_encode }}</pre>
+
+<p>Content of session data:</p>
+{{ dump(sessionData) }}
+{% endblock %}

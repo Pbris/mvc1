@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class RouteControllerTwig extends AbstractController
@@ -49,6 +51,46 @@ class RouteControllerTwig extends AbstractController
         return $this->render('api_landing.html.twig', [
             'jsonRoutes' => $jsonRoutes,
         ]);
+    }
+
+    #[Route("/session", name: "session")]
+    public function displaySession(SessionInterface $session): Response
+    {
+        // Start session if not already started
+        if (!$session->isStarted()) {
+            $session->start();
+        }
+
+        $sessionName = $session->getName();
+        $sessionId = $session->getId();
+        $sessionCookie = $this->getParameter('session.storage.options');
+
+        // Pass session information to template
+        return $this->render('session.html.twig', [
+            'sessionName' => $sessionName,
+            'sessionId' => $sessionId,
+            'sessionCookie' => $sessionCookie,
+            'sessionData' => $session->all(),
+        ]);
+    }
+    #[Route("/session/destroy", name: "session_destroy")]
+    public function destroySession(SessionInterface $session): Response
+    {
+        // Invalidate the session
+        $session->invalidate();
+
+        // Start session if not already started
+        if (!$session->isStarted()) {
+            $session->start();
+        }
+
+        // Add flash message
+        $this->addFlash(
+            'notice',
+            'Session destroyed!'
+        );
+
+        return $this->render('session_destroy.html.twig');
     }
 
 

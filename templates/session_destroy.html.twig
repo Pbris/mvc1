@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+<p><a href="{{ path('session') }}">Go back to Session page</a></p>
+
+{{ include('flash.html.twig') }}
+
+{% endblock %}
