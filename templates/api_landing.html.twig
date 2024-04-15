@@ -7,7 +7,7 @@
     <ul>
         {% for route in jsonRoutes %}
             <li>
-                <strong>Route:</strong> <a href="{{ route.path }}">{{ route.path }}</a><br>
+                <strong>Route:</strong> <a href="{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}/quote">{{ route.path }}</a><br>
                 <strong>Description:</strong> {{ route.description }}
             </li>
         {% endfor %}
