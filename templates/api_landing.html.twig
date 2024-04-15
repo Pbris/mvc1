@@ -4,13 +4,12 @@
 
 {% block body %}
     <h1>JSON routes</h1>
-        <ul>
+    <ul>
         {% for route in jsonRoutes %}
             <li>
-                <strong>Route:</strong> {{ route.path }}<br>
+                <strong>Route:</strong> <a href="{{ route.path }}">{{ route.path }}</a><br>
                 <strong>Description:</strong> {{ route.description }}
             </li>
         {% endfor %}
     </ul>
-
 {% endblock %}
