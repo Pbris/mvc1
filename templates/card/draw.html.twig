@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Draw a Card{% endblock %}
+
+{% block body %}
+    <h1>Draw a Card</h1>
+
+    <div class="drawn-card">
+        {% if drawnCard %}
+            <div class="card">
+                {{ drawnCard.getAsString() }}
+            </div>
+            <p>Remaining cards in the deck: {{ remainingCardsCount }}</p>
+        {% else %}
+            <p>No cards left in the deck.</p>
+        {% endif %}
+    </div>
+{% endblock %}
