@@ -46,6 +46,18 @@ class RouteControllerTwig extends AbstractController
             [
                 'path' => '/api/quote',
                 'description' => 'Get random quote',
+            ],
+            [
+                'path' => '/api/deck',
+                'description' => 'Get the deck of cards',
+            ],
+            [
+                'path' => '/api/deck/shuffle',
+                'description' => 'Shuffle the deck of cards',
+            ],
+            [
+                'path' => '/api/deck/draw/{number}',
+                'description' => 'Draw cards from the deck',
             ]
         ];
         return $this->render('api_landing.html.twig', [
