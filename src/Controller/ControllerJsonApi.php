@@ -14,24 +14,24 @@ class ControllerJsonApi
     #[Route("/api/deck", methods: ['GET'])]
     public function getDeck(): Response
     {
-    $deck = new Deck();
+        $deck = new Deck();
 
-    $cards = [];
-    foreach ($deck->getCards() as $suit => $suitCards) {
-        foreach ($suitCards as $card) {
-            $cards[] = [
-                'suit' => $card->getSuit(),
-                'value' => $card->getValue()
-            ];
+        $cards = [];
+        foreach ($deck->getCards() as $suit => $suitCards) {
+            foreach ($suitCards as $card) {
+                $cards[] = [
+                    'suit' => $card->getSuit(),
+                    'value' => $card->getValue()
+                ];
+            }
         }
+
+        $response = new JsonResponse(['cards' => $cards]);
+        $response->setEncodingOptions(JSON_PRETTY_PRINT);
+
+        return $response;
     }
 
-    $response = new JsonResponse(['cards' => $cards]);
-    $response->setEncodingOptions(JSON_PRETTY_PRINT);
-
-    return $response;
-    }
-    
 
     #[Route("/api/deck/shuffle", methods: ['POST', 'GET'])]
     public function shuffleDeck(SessionInterface $session): Response
@@ -48,7 +48,7 @@ class ControllerJsonApi
 
         // Update the session
         $session->set('deck', $deck);
-    
+
         $cards = [];
         foreach ($deck->getCards() as $suitCards) {
             foreach ($suitCards as $card) {
@@ -58,10 +58,10 @@ class ControllerJsonApi
                 ];
             }
         }
-    
+
         $response = new JsonResponse(['cards' => $cards]);
         $response->setEncodingOptions(JSON_PRETTY_PRINT);
-    
+
         return $response;
     }
 
