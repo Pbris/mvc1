@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Exception;
 
 class CardGameController extends AbstractController
 {
@@ -56,7 +57,7 @@ class CardGameController extends AbstractController
 
 
         if ($deck->remainingCardsCount() < 1) {
-            throw new \Exception("Cannot draw more cards. No cards left in deck.");
+            throw new Exception("Cannot draw more cards. No cards left in deck.");
         }
 
         // Draw a card
@@ -84,7 +85,7 @@ class CardGameController extends AbstractController
         $deck = $session->get('deck');
 
         if ($number > $deck->remainingCardsCount()) {
-            throw new \Exception("Cannot draw $number cards. Only {$deck->remainingCardsCount()} cards left in deck.");
+            throw new Exception("Cannot draw $number cards. Only {$deck->remainingCardsCount()} cards left in deck.");
         }
 
         // Draw the number of cards from the deck

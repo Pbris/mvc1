@@ -11,16 +11,16 @@ class QuoteControllerJson
     #[Route("/api/quote")]
     public function jsonNumber(): Response
     {
-        $QuouteList = [
+        $quoteList = [
             "Life is like riding a bicycle. To keep your balance, you must keep moving forward.",
             "Its never too late to give up.",
             "Theres no such thing as bad weather, only inappropriate clothing."
         ];
-        $randomIndex = random_int(0, count($QuouteList) - 1);
-        $randomQuoute = $QuouteList[$randomIndex];
+        $randomIndex = random_int(0, count($quoteList) - 1);
+        $randomQuote = $quoteList[$randomIndex];
 
         $data = [
-            'quote' => $randomQuoute,
+            'quote' => $randomQuote,
             'date' => date('Y-m-d'),
             'timestamp' => date('H:i:s')
         ];
