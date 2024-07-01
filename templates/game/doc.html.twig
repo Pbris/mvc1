@@ -6,10 +6,21 @@
 <h1>Documentation</h1>
 
 <h2>Flowchart</h2>
-<img src="{{ asset('img/Kmom02.png') }}" alt="">
+<img src="{{ asset('img/flowchart.png') }}" alt="">
 
-<h2>Pseudo code</h2>
+<h2>Pseudokod</h2>
+<img src="{{ asset('img/pseudo1.jpg') }}" alt="">
+<img src="{{ asset('img/pseudo2.jpg') }}" alt="">
 
 <h2>Classes</h2>
+<p>Deck<br>
+Hanterar kortleken: shuffle(), drawCard()<br><br>
+Card<br>
+Representerar spelkort: getSuit(), getValue(), getBlackjackValue()<br><br>
+BlackjackGame<br>
+Hanterar hela spelet genom ovan nämnda spelmetoder i pseudokod.<br><br>
+BlackjackController<br>
+Hanterar routes och vyer: home(), hit(), stand(), result(), playAgain(), doc()<br>
+</p>
 
 {% endblock %}
