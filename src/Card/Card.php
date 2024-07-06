@@ -27,4 +27,17 @@ class Card
     {
         return "{$this->value} of {$this->suit}";
     }
+
+    public function getBlackjackValue(): int
+    {
+        if (is_numeric($this->value)) {
+            return (int) $this->value;
+        }
+
+        if (in_array($this->value, ['Jack', 'Queen', 'King'])) {
+            return 10;
+        }
+
+        return 11;
+    }
 }

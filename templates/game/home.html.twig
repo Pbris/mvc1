@@ -1,24 +1,13 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block title %}Card Game{% endblock %}
+{% block title %}Blackjack{% endblock %}
 
 {% block body %}
-<h1>Card game</h1>
-
-<p>This is the base for a card game.</p>
-
-<p>These are the routes used in developing this game.</p>
-
+<h1>Blackjack</h1>
+<h2>Rules and description:</h2>
+<p>The goal of the game is to get closer to 21 than the dealer. In my game, the dealer wins in case of a tie. The dealer first deals two face-up cards to each player, in my game to one player. The dealer deals one card to themselves. Players then choose whether they want more cards or to stand. When the players have finished, the dealer draws cards. The dealer must stand on 17 or better and draw if it's under 17. The dealer must also stand if they have, for example, an Ace and a 6 (7/17). All suited cards are worth 10, and an Ace is worth 11 or 1.</p>
 <ul>
     <li><a href="{{ path('doc') }}">Documentation page</a></li>
+    <li><a href="{{ path('play') }}">Start playing!</a></li>
 </ul>
-
-<h1>BLACKJACK</h1>
-
-<p>Underneath is my UML diagram for my classes. As you can see I have three classes, and a handful of helpful methods for each class.</p>
-<h3>Relations</h3>
-<p>"Deck" has a aggregation relationship with "Card", it might contain cards, and cards can exist without a deck. And "CardGraphic" inherits from Card.</p>
-
-<img src="{{ asset('img/Kmom02.png') }}" alt="">
-
 {% endblock %}

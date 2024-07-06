@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Exception;
 
 use App\Deck\Deck;
+use App\Game\BlackjackGame;
 
 class ControllerJsonApi
 {
@@ -97,6 +98,23 @@ class ControllerJsonApi
         $data = [
             'drawnCards' => $drawnCards,
             'remainingCardsCount' => $deck->remainingCardsCount()
+        ];
+
+        return new JsonResponse($data);
+    }
+
+    #[Route('/api/game/standings', methods: ['GET'])]
+    public function getStandings(SessionInterface $session): Response
+    {
+        if (!$session->has('game')) {
+            return new JsonResponse(['No game in progress']);
+        }
+
+        $game = $session->get('game');
+
+        $data = [
+            'playerValue' => $game->getHandValue($game->getPlayerHand()),
+            'dealerValue' => $game->getHandValue($game->getDealerHand())
         ];
 
         return new JsonResponse($data);

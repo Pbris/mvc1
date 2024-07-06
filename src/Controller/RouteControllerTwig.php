@@ -58,6 +58,10 @@ class RouteControllerTwig extends AbstractController
             [
                 'path' => '/api/deck/draw/{number}',
                 'description' => 'Draw cards from the deck',
+            ],
+            [
+                'path' => '/api/game/standings',
+                'description' => 'Get current standings in Blackjack game',
             ]
         ];
         return $this->render('api_landing.html.twig', [

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blackjack Result{% endblock %}
+
+{% block body %}
+<h1>Blackjack Result</h1>
+
+<h2>Player's Hand</h2>
+<ul>
+    {% for card in playerHand %}
+        <li>{{ card.getAsString() }}</li>
+    {% endfor %}
+</ul>
+<p>Player's Hand Value: {{ playerValue }}</p>
+
+<h2>Dealer's Hand</h2>
+<ul>
+    {% for card in dealerHand %}
+        <li>{{ card.getAsString() }}</li>
+    {% endfor %}
+</ul>
+<p>Dealer's Hand Value: {{ dealerValue }}</p>
+
+{% if playerValue > 21 %}
+    <p>Player Busts! Dealer Wins!</p>
+{% elseif dealerValue > 21 %}
+    <p>Dealer Busts! Player Wins!</p>
+{% elseif playerValue == dealerValue %}
+    <p>It's a tie, but unfortunately dealer still wins.</p>
+{% elseif playerValue > dealerValue %}
+    <p>Player Wins!</p>
+{% else %}
+    <p>Dealer Wins!</p>
+{% endif %}
+
+<a href="{{ path('game_play_again') }}">Play Again</a>
+{% endblock %}
