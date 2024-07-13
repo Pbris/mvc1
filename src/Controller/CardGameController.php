@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Deck\Deck;
+use App\Card\Deck;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

@@ -2,8 +2,8 @@
 
 namespace App\Game;
 
-use App\Deck\Deck;
-use App\Deck\Card;
+use App\Card\Deck;
+use App\Card\Card;
 
 class BlackjackGame
 {

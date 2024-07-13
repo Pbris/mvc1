@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Exception;
 
-use App\Deck\Deck;
+use App\Card\Deck;
 use App\Game\BlackjackGame;
 
 class ControllerJsonApi
