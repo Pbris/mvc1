@@ -104,12 +104,12 @@
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/app.html">App</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-dice.html">Dice</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-card.html">Card</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    Dice
+    Deck
 
     
             <div class="phpdocumentor-element__package">
@@ -128,7 +128,7 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Dice/Dice.php"><a href="files/src-dice-dice.html"><abbr title="src/Dice/Dice.php">Dice.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Deck.php"><a href="files/src-card-deck.html"><abbr title="src/Card/Deck.php">Deck.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">5</span>
 
@@ -145,7 +145,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/App-Dice-Dice.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Card-Deck.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -159,12 +159,12 @@
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/App-Dice-Dice.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Card-Deck.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a class="" href="classes/App-Dice-Dice.html#property_value">$value</a>
+    <a class="" href="classes/App-Card-Deck.html#property_cards">$cards</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -173,33 +173,38 @@
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/App-Dice-Dice.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Card-Deck.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/App-Dice-Dice.html#method___construct">__construct()</a>
+    <a class="" href="classes/App-Card-Deck.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/App-Dice-Dice.html#method_getAsString">getAsString()</a>
+    <a class="" href="classes/App-Card-Deck.html#method_drawCard">drawCard()</a>
     <span>
-                                &nbsp;: string    </span>
+                                &nbsp;: <a href="classes/App-Card-Card.html"><abbr title="\App\Card\Card">Card</abbr></a>|null    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/App-Dice-Dice.html#method_getValue">getValue()</a>
+    <a class="" href="classes/App-Card-Deck.html#method_getCards">getCards()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/App-Card-Deck.html#method_remainingCardsCount">remainingCardsCount()</a>
     <span>
                                 &nbsp;: int    </span>
 </dt>
-<dd>Get the value of the last roll.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/App-Dice-Dice.html#method_roll">roll()</a>
+    <a class="" href="classes/App-Card-Deck.html#method_shuffle">shuffle()</a>
     <span>
-                                &nbsp;: int    </span>
+                                &nbsp;: void    </span>
 </dt>
 
     </dl>
@@ -212,7 +217,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/App-Dice-Dice.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Card-Deck.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -222,15 +227,15 @@
             -protected
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_value">
-        $value
-        <a href="classes/App-Dice-Dice.html#property_value" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_cards">
+        $cards
+        <a href="classes/App-Card-Deck.html#property_cards" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Dice/Dice.php"><a href="files/src-dice-dice.html"><abbr title="src/Dice/Dice.php">Dice.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Deck.php"><a href="files/src-card-deck.html"><abbr title="src/Card/Deck.php">Deck.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">7</span>
 
@@ -241,8 +246,8 @@
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$value</span>
-    </code>
+    <span class="phpdocumentor-signature__name">$cards</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
     
     
@@ -256,7 +261,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/App-Dice-Dice.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Card-Deck.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -267,11 +272,11 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/App-Dice-Dice.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Card-Deck.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Dice/Dice.php"><a href="files/src-dice-dice.html"><abbr title="src/Dice/Dice.php">Dice.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Deck.php"><a href="files/src-card-deck.html"><abbr title="src/Card/Deck.php">Deck.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">9</span>
 
@@ -299,22 +304,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getAsString">
-        getAsString()
-        <a href="classes/App-Dice-Dice.html#method_getAsString" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_drawCard">
+        drawCard()
+        <a href="classes/App-Card-Deck.html#method_drawCard" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Dice/Dice.php"><a href="files/src-dice-dice.html"><abbr title="src/Dice/Dice.php">Dice.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Deck.php"><a href="files/src-card-deck.html"><abbr title="src/Card/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getAsString</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">drawCard</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/App-Card-Card.html"><abbr title="\App\Card\Card">Card</abbr></a>|null</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -327,7 +332,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/App-Card-Card.html"><abbr title="\App\Card\Card">Card</abbr></a>|null</span>
             </section>
 
 </article>
@@ -337,23 +342,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getValue">
-        getValue()
-        <a href="classes/App-Dice-Dice.html#method_getValue" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getCards">
+        getCards()
+        <a href="classes/App-Card-Deck.html#method_getCards" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Dice/Dice.php"><a href="files/src-dice-dice.html"><abbr title="src/Dice/Dice.php">Dice.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Deck.php"><a href="files/src-card-deck.html"><abbr title="src/Card/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get the value of the last roll.</p>
-
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getValue</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                    <span class="phpdocumentor-signature__name">getCards</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -366,11 +370,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">int</span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>as value rolled.</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             </section>
 
 </article>
@@ -380,22 +380,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_roll">
-        roll()
-        <a href="classes/App-Dice-Dice.html#method_roll" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_remainingCardsCount">
+        remainingCardsCount()
+        <a href="classes/App-Card-Deck.html#method_remainingCardsCount" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Dice/Dice.php"><a href="files/src-dice-dice.html"><abbr title="src/Dice/Dice.php">Dice.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Deck.php"><a href="files/src-card-deck.html"><abbr title="src/Card/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">roll</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                    <span class="phpdocumentor-signature__name">remainingCardsCount</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -411,6 +411,40 @@
         <span class="phpdocumentor-signature__response_type">int</span>
             </section>
 
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_shuffle">
+        shuffle()
+        <a href="classes/App-Card-Deck.html#method_shuffle" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Deck.php"><a href="files/src-card-deck.html"><abbr title="src/Card/Deck.php">Deck.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">shuffle</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+    
+
+    
 </article>
             </section>
 
@@ -418,7 +452,7 @@
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Dice/Dice.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Card/Deck.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -517,25 +551,26 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/App-Dice-Dice.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/App-Dice-Dice.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/App-Card-Deck.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/App-Card-Deck.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li class=""><a href="classes/App-Dice-Dice.html#property_value">$value</li>
+                                                    <li class=""><a href="classes/App-Card-Deck.html#property_cards">$cards</li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li class=""><a href="classes/App-Dice-Dice.html#method___construct">__construct()</a></li>
-                                            <li class=""><a href="classes/App-Dice-Dice.html#method_getAsString">getAsString()</a></li>
-                                            <li class=""><a href="classes/App-Dice-Dice.html#method_getValue">getValue()</a></li>
-                                            <li class=""><a href="classes/App-Dice-Dice.html#method_roll">roll()</a></li>
+                                            <li class=""><a href="classes/App-Card-Deck.html#method___construct">__construct()</a></li>
+                                            <li class=""><a href="classes/App-Card-Deck.html#method_drawCard">drawCard()</a></li>
+                                            <li class=""><a href="classes/App-Card-Deck.html#method_getCards">getCards()</a></li>
+                                            <li class=""><a href="classes/App-Card-Deck.html#method_remainingCardsCount">remainingCardsCount()</a></li>
+                                            <li class=""><a href="classes/App-Card-Deck.html#method_shuffle">shuffle()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -555,7 +590,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/App-Dice-Dice.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/App-Card-Deck.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
