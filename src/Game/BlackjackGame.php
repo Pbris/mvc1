@@ -2,6 +2,9 @@
 
 namespace App\Game;
 
+use App\Card\Deck;
+use App\Card\Card;
+
 /**
  * Manages a Blackjack game.
  */
