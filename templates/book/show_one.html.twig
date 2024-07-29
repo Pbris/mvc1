@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show A Book{% endblock %}
+
+{% block body %}
+    <h1>Book Details</h1>
+    <ul>
+        <li><strong>Title:</strong> {{ book.title }}</li>
+        <li><strong>ISBN:</strong> {{ book.isbn }}</li>
+        <li><strong>Author:</strong> {{ book.author }}</li>
+        <img src="{{ asset(book.image) }}" alt="Book Image">
+    </ul>
+    <a href="{{ path('book_edit', {id: book.id}) }}">Edit Book</a>
+    <a href="{{ path('book_delete_by_id', {id: book.id}) }}">Delete Book</a>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Book{% endblock %}
+
+{% block body %}
+    <h1>Edit Book</h1>
+    <form action="{{ path('book_update', {id: book.id}) }}" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ book.title }}" required><br>
+
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn" value="{{ book.isbn }}" required><br>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" value="{{ book.author }}" required><br>
+
+        <label for="image_filename">Image Filename:</label>
+        <input type="text" id="image_filename" name="image_filename" value="{{ book.image }}"><br>
+
+        <button type="submit">Update Book</button>
+    </form>
+{% endblock %}
