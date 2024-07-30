@@ -13,6 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Card\Deck;
 use App\Game\BlackjackGame;
 use App\Entity\Book;
+use App\Repository\BookRepository;
 
 class ControllerJsonApi extends AbstractController
 {
@@ -136,9 +137,9 @@ class ControllerJsonApi extends AbstractController
     }
 
     #[Route('/api/library/book/{isbn}', name: 'api_library_book', methods: ['GET'])]
-    public function getBookByIsbn(string $isbn, ManagerRegistry $doctrine): JsonResponse
+    public function getBookByIsbn(string $isbn, BookRepository $bookRepository): JsonResponse
     {
-        $book = $doctrine->getRepository(Book::class)->findOneBy(['isbn' => $isbn]);
+        $book = $bookRepository->findByIsbn($isbn);
 
         $response = $this->json($book);
         $response->setEncodingOptions(
