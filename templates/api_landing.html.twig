@@ -9,6 +9,9 @@
             <li>
                 <strong>Route:</strong> {{ route.path }}<br>
                 <strong>Description:</strong> {{ route.description }}
+                {% if route.url is defined %}
+                <a href="{{ route.url }}">/library/book/9789171370181</a>
+                {% endif %}
             </li>
         {% endfor %}
     </ul>

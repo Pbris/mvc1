@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class RouteControllerTwig extends AbstractController
 {
@@ -40,7 +41,7 @@ class RouteControllerTwig extends AbstractController
         return $this->render('report.html.twig');
     }
     #[Route("/api", name: "api_landing")]
-    public function landingPage(): Response
+    public function landingPage(UrlGeneratorInterface $urlGenerator): Response
     {
         $jsonRoutes = [
             [
@@ -62,6 +63,15 @@ class RouteControllerTwig extends AbstractController
             [
                 'path' => '/api/game/standings',
                 'description' => 'Get current standings in Blackjack game',
+            ],
+            [
+                'path' => '/api/library/books',
+                'description' => 'Show all books in library',
+            ],
+            [
+                'path' => '/api/library/book/{isbn}',
+                'description' => 'Show a book by ISBN, example: ',
+                'url' => $urlGenerator->generate('api_library_book', ['isbn' => 9789171370181], UrlGeneratorInterface::ABSOLUTE_URL),
             ]
         ];
         return $this->render('api_landing.html.twig', [
