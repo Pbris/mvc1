@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Exception;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Service\DeckManager;
 
 use App\Card\Deck;
 use App\Game\BlackjackGame;
@@ -42,14 +43,8 @@ class ControllerJsonApi extends AbstractController
     #[Route("/api/deck/shuffle", methods: ['POST', 'GET'])]
     public function shuffleDeck(SessionInterface $session): Response
     {
-        // Check if deck is not in session
-        if (!$session->has('deck')) {
-            $deck = new Deck(); // Create a new deck of cards
-            $session->set('deck', $deck);
-        }
-
         // Retrieve deck from session
-        $deck = $session->get('deck');
+        $deck = $this->deckManager->getOrCreateDeck();
         $deck->shuffle();
 
         // Update the session
@@ -74,14 +69,8 @@ class ControllerJsonApi extends AbstractController
     #[Route('/api/deck/draw/{number}', name: 'draw_cards_api', methods: ['POST', 'GET'])]
     public function drawCards(int $number, SessionInterface $session): Response
     {
-        // Check if deck is not in session
-        if (!$session->has('deck')) {
-            $deck = new Deck();
-            $session->set('deck', $deck);
-        }
-
         // Retrieve deck from session
-        $deck = $session->get('deck');
+        $deck = $this->deckManager->getOrCreateDeck();
 
         if ($number > $deck->remainingCardsCount()) {
             throw new Exception("Cannot draw $number cards. Only {$deck->remainingCardsCount()} cards left in deck.");
