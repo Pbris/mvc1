@@ -125,4 +125,15 @@ class RouteControllerTwig extends AbstractController
         return $this->render('metrics.html.twig');
     }
 
+        /**
+     * Landing page.
+     */
+    #[Route('/library', name: 'app_library')]
+    public function index(): Response
+    {
+        return $this->render('book/index.html.twig', [
+            'controller_name' => 'BookController',
+        ]);
+    }
+
 }

@@ -17,16 +17,6 @@ use Symfony\Component\Routing\Attribute\Route;
 class BookController extends AbstractController
 {
     /**
-     * Landing page.
-     */
-    #[Route('/library', name: 'app_library')]
-    public function index(): Response
-    {
-        return $this->render('book/index.html.twig', [
-            'controller_name' => 'BookController',
-        ]);
-    }
-    /**
      * Displays form for creating a new book.
      */
     #[Route('/book/create', name: 'book_create', methods: ['GET'])]
