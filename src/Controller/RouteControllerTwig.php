@@ -125,7 +125,7 @@ class RouteControllerTwig extends AbstractController
         return $this->render('metrics.html.twig');
     }
 
-        /**
+    /**
      * Landing page.
      */
     #[Route('/library', name: 'app_library')]
