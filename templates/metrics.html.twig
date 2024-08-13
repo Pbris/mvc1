@@ -1,25 +1,106 @@
 {% extends "base.html.twig" %}
 
-{% block title %}About{% endblock %}
+{% block title %}Metrics{% endblock %}
 
 {% block body %}
-<div class="two-col-layout">
-<main class="main">
-    <h1>About</h1>
-    <p>"Kursen Objektorienterade webbteknologier, a.k.a. mvc, fokuserar på objektorienterade programmeringstekniker i programmeringsspråket PHP. Klassiska objektorienterade konstruktioner hanteras tillsammans med objektorienterad programmering i webbaserat ramverk tillsammans med databaser samt enhetstestning."</p>
-    <a href="{{ asset('img/web.jpg') }}">
-        <img src="{{ asset('img/web.jpg') }}" alt="" style="max-width: 400px;">
+<h1>Introduktion</h1>
+    <p>Denna analys kommer beröra kodkvaliteten av mitt arbete hittills i kursen. Vid bedömning av kodkvalitet kommer mättalen "de 6 C'na" användas. Nedan förklaras inledningsvis min tolkning av vad dessa står för, med något enstaka exempel. De verktyg som legat till grund för analysen är Scrutinizer och PHPMetrics.</p>
+    
+    <h2>De 6 C'na:</h2>
+    
+    <h3>Codestyle</h3>
+    <p>Kodstil avser de riktlinjer som följs när man skriver kod, kodstandarden. Det inkluderar aspekter som indentering, variabelnamngivning, mellanrum och övergripande formatering. För denna kurs används PHPMD och PHPSTAN för kontroll och justering av kodstilen. Genom att följa en konsekvent kodstil förbättras kodens läsbarhet och underhållbarhet.</p>
+    
+    <h3>Coverage</h3>
+    <p>Coverage mäter hur stor del av din kod som testas av din testsvit, procentandelen kod som exekveras under tester. Högre kodtäckning indikerar att fler delar av din kodbas testas, vilket minskar risken för oupptäckta buggar. I min kod har jag en kodtäckning på 80-100% för de klasser som hanterar mitt Blackjack-spel. Övrig kod testas ej ännu vilket ger en låg totalsiffra på 16%, exemplifierat i rapporterna från Scrutinizer och PHPMetrics nedan:</p>
+    <img src="{{ asset('img/image001.png') }}" alt="">
+    <img src="{{ asset('img/image003.png') }}" alt="">
+    <h3>Complexity</h3>
+    <p>Complexity tar hänsyn till faktorer som antalet grenar, loopar och villkor i en kodbas. Antalet oberoende potentiella vägar i koden. Lägre komplexitet leder till kod som är lättare att förstå, debugga och underhålla.</p>
+    
+    <h3>Cohesion</h3>
+    <p>Cohesion beskriver hur nära ansvaret för en modul eller klass ligger med dess syfte. Eftersträvansvärt är hög cohesion, vilket innebär att en modul eller klass fokuserar på en enda, väl definierad uppgift. Det främjar kodorganisation, återanvändbarhet och minskar påverkan av ändringar i en del av koden på andra delar.</p>
+    
+    <h3>Coupling</h3>
+    <p>Coupling avser graden av ömsesidigt beroende mellan olika klasser eller moduler i en kodbas. Låg coupling indikerar lösa kopplingar, där ändringar i en klass har minimal påverkan på andra. De har alltså låg grad av beroende av andra klasser. Hög coupling leder till täta beroenden, vilket gör koden svårare att ändra och underhålla.</p>
+    <ul>
+        <li>Afferent coupling – antalet klasser som är beroende av klassen.</li>
+        <li>Efferent coupling – antalet klasser en klass är beroende av.</li>
+    </ul>
+    
+    <h3>CRAP</h3>
+    <p>CRAP står för Change Risk Anti-Patterns, eller Change Risk Analyzer and Predictor. Det beräknar kodens kvalitet och underhållbarhet baserat på dess komplexitet, storlek och testtäckning. Ett högre CRAP-poäng indikerar en högre risk för buggar och ett behov av omstrukturering för att förbättra kodens underhållbarhet, men även fler tester kan vara en väg för att minska CRAP-poäng. I exempelvis min ControllerJsonAPI så har jag inga tester men min högsta komplexitet, vilket ger en hög CRAP-score, exemplifierat i rapporten från Scrutinizer nedan:</p>
+    <img src="{{ asset('img/image005.png') }}" alt="">
+    <h2>Phpmetrics</h2>
+    <h3>Överblick för Phpmetrics-rapporten:</h3>
+    <img src="{{ asset('img/image007.png') }}" alt="">
+    <p>Generellt tycks rapporten visa att koden är på en godtagbar nivå, men utvecklingsområden finns i exempelvis de violations som hittats. I Phpmetrics maintainability/complexity-graf kan också noteras tre större röda cirklar, vilket antyder svårunderhållna/komplexa filer vilket också bör undersökas vidare. Även kodtäckningen, med 27 assertions, är låg för kodmängden.</p>
+    <p>Angående violations är de fem till antalet, två errors tycks relaterat till klasser ("god objects") och tre varningar relaterade till Stable Abstraction Principle. Sistnämnda varningarna tycks vara att mina 3 packages anses för konkreta och i detta har problematisk Coupling, men då jag anser att de fyller sitt syfte (och att ändringar blir mer problematiska) väljer jag att ignorera dessa:</p>
+    <img src="{{ asset('img/image009.png') }}" alt="">
+    <p>Angående komplexitet så beskrivs den ytterligare under "Complexity & defects". Värdena ser relativt bra ut men ControllerJsonApi kan behöva ses över då den har något högre "Relative structural complexity" och något förhöjd risk för buggar med 0.33 under "Bugs".</p>
+    <img src="{{ asset('img/image011.png') }}" alt="">
+    <h2>Scrutinizer</h2>
+    <h3>Överblick från Scrutinizer-rapporten:</h3>
+    <img src="{{ asset('img/image013.png') }}" alt="">
+    <p>Koden får en 10a i betyg vilket såklart är glädjande, och kunde byggas i Scrutinizer-testet. Då koden fortfarande är ett mindre projekt inom ett ramverk så är detta troligen en del i förklaringen. Kodtäckningen på 16% är rödmarkerad och något som tidigare nämnts är låg för kodmängden, då denna enbart testar modeller inblandade i ett blackjack-spel.</p>
+    <p>Det finns tre issues i Scrutinizer-rapporten, i filerna ".php-cs-fixer.dist.php", samt "Kernel.php". Jag har kikat på dessa filer men då de är mer allmänna och introducerade av mig i kursen väljer jag därför att ignorera dessa.</p>
+    <img src="{{ asset('img/image014.png') }}" alt="">
+    <p>Samtliga klasser får betyg A vilket är positivt.</p>
+    <img src="{{ asset('img/image016.png') }}" alt="">
+    <img src="{{ asset('img/image018.png') }}" alt="">
+    <p>Den klass som sticker ut mest med högre CRAP-poäng och komplexitet är ControllerJsonApi.</p>
+    <p>Klickbara Scrutinizer badges, senaste bygget:</p>
+    <a href="https://scrutinizer-ci.com/g/Pbris/mvc1/?branch=main">
+        <img src="https://scrutinizer-ci.com/g/Pbris/mvc1/badges/quality-score.png?b=main" alt="Quality Score Badge">
     </a>
-    </main>
-
-        <aside class="aside">
-        <h4>Kursen</h4>
-        <ul>
-        <li><a href="https://github.com/dbwebb-se/mvc">Kursens repo, GitHub</a></li>
-        <li><a href="https://github.com/Pbris/mvc1">Webbplatsens repo</a></li>
-                
-        </ul>
-    </aside>
-</div>
+    <a href="https://scrutinizer-ci.com/g/Pbris/mvc1/?branch=main">
+        <img src="https://scrutinizer-ci.com/g/Pbris/mvc1/badges/coverage.png?b=main" alt="Coverage Badge">
+    </a>
+    <a href="https://scrutinizer-ci.com/g/Pbris/mvc1/?branch=main">
+        <img src="https://scrutinizer-ci.com/g/Pbris/mvc1/badges/build.png?b=main" alt="Build Badge">
+    </a>
+    
+    <h2>Förbättringar</h2>
+    
+    <ol>
+        <li>
+            <p>Minska komplexiteten i ControllerJsonApi, och med detta förhoppningsvis minska bug-tendens och CRAP-poäng.</p>
+            <p>Resultat: Bröt ut repetetitiv kod i shuffleDeck() och drawCards() för att hämta deck från session och skapade en metod för detta med hjälp av Trait. (En ytterligare SAP-issues-varning, tidigare beskrivet i inledning för Phpmetrics, uppstod av detta i Phpmetrics för App/Trait, men jag väljer att ignorera detta då jag återigen bedömer att alternativen är mer problematiska.)</p>
+            <p>Före:</p>
+            <ul>
+                <li>Phpmetrics:</li>
+                <img src="{{ asset('img/image020.png') }}" alt="">
+                <li>Scrutinizer:</li>
+                <img src="{{ asset('img/image021.png') }}" alt="">
+            </ul>
+            <p>Efter:</p>
+            <ul>
+                <li>Phpmetrics:</li>
+                <img src="{{ asset('img/image022.png') }}" alt="">
+                <li>Scrutinizer:</li>
+                <img src="{{ asset('img/image024.png') }}" alt="">
+            </ul>
+        </li>
+        <li>
+            <p>Öka kodtäckningen till 100% även för Card och Deck som hanterar allt relaterat till kort tillsammans med CardGraphic, nu på 86,67 respektive 87,5 %.</p>
+            <p>Resultat: Efter adderande av 3 testfall uppnåddes full kodtäckning för klasserna. En upptäckt gjordes också under testskrivandet vilket föranledde en mindre justering av kodbasen metoden drawCard() i Deck kändes motiverad för att inte bara hantera tom kortlek med exception.</p>
+            <p>PhpMetrics: Gick från 27 till 35 assertions.</p>
+            <p>Scrutinizer: Total Code coverage ökade från 16 till 17%.</p>
+        </li>
+        <li>
+            <p>Åtgärda det rödmarkerade "Class Violation"-error som Phpmetrics uppmärksammat, "Blob/God object" för BookController. Enligt Phpmetrics följer är det inte enligt "Single responsibility principle" att ha mer än 7 publika metoder. (Valde att avstå ProductController då detta var en övning).</p>
+            <p>Resultat: Minskade antalet publika metoder från 8 till 7 genom att dela upp dess routes, vilket tog bort violation för BookController i Phpmetrics.</p>
+        </li>
+    </ol>
+    
+    <h2>Diskussion</h2>
+    <h3>Kan man aktivt jobba med kodkvalitet och "clean code" på detta sättet?</h3>
+    <p>Att aktivt arbeta med kodkvalitet och "clean code" genom verktyg som Scrutinizer och PHPMetrics är definitivt möjligt och kan ge värdefulla insikter. Själva granskningen går ju snabbt och all form av yttre kvalitetsgranskning för att åtminstone undvika stora kvalitetsproblem och buggar är i min värld positiv.</p>
+    
+    <h3>Finns det fördelar och kanske nackdelar?</h3>
+    <p>Fördelarna inkluderar ökad kodläsbarhet, lättare underhåll och potentiellt färre buggar. Nackdelar kan vara tiden som krävs för att implementera förändringar och risken att bli alltför fokuserad på bra mätvärden i stället för faktisk funktionalitet. Programmen kan inte riktigt bedöma syftet med koden och det krävs av en själv att man har en balans i hur mycket det är rimligt att åtgärda för bättre mätvärden.</p>
+    
+    <h3>Ser du andra möjligheter att jobba mot "clean code"?</h3>
+    <p>Andra sätt att arbeta mot "clean code" tänker jag är utövande av grundläggande principer som DRY. Även användning av flödesscheman och pseudokod som vi gjort tidigare i kursen kan vara av värde för att minska risk för "rörig" kod. Parprogrammering tänker jag också kan vara hjälpsamt, för att få en annan form av kontinuerlig yttre granskning.</p>
 
 {% endblock %}
