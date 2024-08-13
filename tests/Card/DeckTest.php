@@ -38,10 +38,10 @@ class DeckTest extends TestCase
     {
         $deck = new Deck();
         $cards = $deck->getCards();
-        
+
         // Check 4 suits
-        $this->assertCount(4, $cards); 
-        
+        $this->assertCount(4, $cards);
+
         foreach ($cards as $suit => $cardsInSuit) {
             $this->assertCount(13, $cardsInSuit);
         }
@@ -53,11 +53,11 @@ class DeckTest extends TestCase
     public function testDrawAllCards()
     {
         $deck = new Deck();
-        
+
         for ($i = 0; $i < 52; $i++) {
             $deck->drawCard();
         }
-        
+
         $this->assertEquals(0, $deck->remainingCardsCount());
         $this->assertNull($deck->drawCard());
     }
