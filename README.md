@@ -1,5 +1,8 @@
 # My Symfony Website
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Pbris/mvc1/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Pbris/mvc1/?branch=main)
+[![Code Coverage](https://scrutinizer-ci.com/g/Pbris/mvc1/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Pbris/mvc1/?branch=main)
+[![Build Status](https://scrutinizer-ci.com/g/Pbris/mvc1/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Pbris/mvc1/build-status/main)
 ## Introduction
 Welcome to my Symfony-based website. This project is made to show various features in course MVC at BTH university. Below, you’ll find instructions on how to get started.
 
