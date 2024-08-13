@@ -30,4 +30,35 @@ class DeckTest extends TestCase
         $this->assertInstanceOf(CardGraphic::class, $card);
         $this->assertEquals(51, $deck->remainingCardsCount());
     }
+
+    /**
+     * Test GetCards.
+     */
+    public function testGetCards()
+    {
+        $deck = new Deck();
+        $cards = $deck->getCards();
+        
+        // Check 4 suits
+        $this->assertCount(4, $cards); 
+        
+        foreach ($cards as $suit => $cardsInSuit) {
+            $this->assertCount(13, $cardsInSuit);
+        }
+    }
+
+    /**
+     * Test draw all cards.
+     */
+    public function testDrawAllCards()
+    {
+        $deck = new Deck();
+        
+        for ($i = 0; $i < 52; $i++) {
+            $card = $deck->drawCard();
+        }
+        
+        $this->assertEquals(0, $deck->remainingCardsCount());
+        $this->assertNull($deck->drawCard());
+    }
 }

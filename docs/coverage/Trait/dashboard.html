@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /home/pela23/dbwebb-kurser/mvc/me/report/src/Game</title>
+  <title>Dashboard for /home/pela23/dbwebb-kurser/mvc/me/report/src/Trait</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../_css/bootstrap.min.css?v=9.2.31" rel="stylesheet" type="text/css">
   <link href="../_css/nv.d3.min.css?v=9.2.31" rel="stylesheet" type="text/css">
@@ -17,7 +17,7 @@
       <nav aria-label="breadcrumb">
        <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="../index.html">/home/pela23/dbwebb-kurser/mvc/me/report/src</a></li>
-         <li class="breadcrumb-item"><a href="index.html">Game</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Trait</a></li>
          <li class="breadcrumb-item active">(Dashboard)</li>
 
        </ol>
@@ -58,6 +58,7 @@
         </tr>
        </thead>
        <tbody>
+       <tr><td><a href="DeckManagerTrait.php.html#8">App\Trait\DeckManagerTrait</a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -74,6 +75,7 @@
         </tr>
        </thead>
        <tbody>
+       <tr><td><a href="DeckManagerTrait.php.html#8">App\Trait\DeckManagerTrait</a></td><td class="text-right">6</td></tr>
 
        </tbody>
       </table>
@@ -111,8 +113,7 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="BlackjackGame.php.html#109"><abbr title="App\Game\BlackjackGame::dealerMustDraw">dealerMustDraw</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="BlackjackGame.php.html#119"><abbr title="App\Game\BlackjackGame::isPlayerBusted">isPlayerBusted</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DeckManagerTrait.php.html#10"><abbr title="App\Trait\DeckManagerTrait::getOrCreateDeck">getOrCreateDeck</abbr></a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -129,6 +130,7 @@
         </tr>
        </thead>
        <tbody>
+       <tr><td><a href="DeckManagerTrait.php.html#10"><abbr title="App\Trait\DeckManagerTrait::getOrCreateDeck">getOrCreateDeck</abbr></a></td><td class="text-right">6</td></tr>
 
        </tbody>
       </table>
@@ -157,7 +159,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,1,0,0], "Class Coverage"))
+      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -175,7 +177,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([2,0,0,0,0,0,0,0,0,1,0,6], "Method Coverage"))
+      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -225,7 +227,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[81.81818181818183,13,"<a href=\"BlackjackGame.php.html#11\">App\\Game\\BlackjackGame<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[0,2,"<a href=\"DeckManagerTrait.php.html#8\">App\\Trait\\DeckManagerTrait<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -249,7 +251,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[100,1,"<a href=\"BlackjackGame.php.html#25\">App\\Game\\BlackjackGame::__construct<\/a>"],[100,1,"<a href=\"BlackjackGame.php.html#34\">App\\Game\\BlackjackGame::dealCards<\/a>"],[100,1,"<a href=\"BlackjackGame.php.html#44\">App\\Game\\BlackjackGame::hitPlayer<\/a>"],[100,1,"<a href=\"BlackjackGame.php.html#52\">App\\Game\\BlackjackGame::hitDealer<\/a>"],[100,1,"<a href=\"BlackjackGame.php.html#62\">App\\Game\\BlackjackGame::getPlayerHand<\/a>"],[100,1,"<a href=\"BlackjackGame.php.html#72\">App\\Game\\BlackjackGame::getDealerHand<\/a>"],[81.81818181818183,5,"<a href=\"BlackjackGame.php.html#83\">App\\Game\\BlackjackGame::getHandValue<\/a>"],[0,1,"<a href=\"BlackjackGame.php.html#109\">App\\Game\\BlackjackGame::dealerMustDraw<\/a>"],[0,1,"<a href=\"BlackjackGame.php.html#119\">App\\Game\\BlackjackGame::isPlayerBusted<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[0,2,"<a href=\"DeckManagerTrait.php.html#10\">App\\Trait\\DeckManagerTrait::getOrCreateDeck<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);

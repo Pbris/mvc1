@@ -34,4 +34,13 @@ class CardTest extends TestCase
         $this->assertEquals(2, $cardNum->getBlackjackValue());
         $this->assertEquals(11, $cardAce->getBlackjackValue());
     }
+
+    /**
+     * Test getAsString.
+     */
+    public function testGetAsString()
+    {
+        $card = new Card('Hearts', 'King');
+        $this->assertEquals('King of Hearts', $card->getAsString());
+    }
 }
