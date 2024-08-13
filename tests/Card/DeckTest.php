@@ -55,7 +55,7 @@ class DeckTest extends TestCase
         $deck = new Deck();
         
         for ($i = 0; $i < 52; $i++) {
-            $card = $deck->drawCard();
+            $deck->drawCard();
         }
         
         $this->assertEquals(0, $deck->remainingCardsCount());
