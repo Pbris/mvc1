@@ -27,6 +27,11 @@ class Deck
 
     public function drawCard(): ?Card
     {
+        // Return null if no cards left
+        if (empty($this->cards)) {
+            return null;
+        }
+
         // Get a random suit from available suits
         $suits = array_keys($this->cards);
         $randomSuit = $suits[array_rand($suits)];
