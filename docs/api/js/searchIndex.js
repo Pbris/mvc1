@@ -146,11 +146,6 @@ Search.appendIndex(
             "summary": "Controller\u0020for\u0020managing\u0020library.",
             "url": "classes/App-Controller-BookController.html"
         },                {
-            "fqsen": "\\App\\Controller\\BookController\u003A\u003Aindex\u0028\u0029",
-            "name": "index",
-            "summary": "Landing\u0020page.",
-            "url": "classes/App-Controller-BookController.html#method_index"
-        },                {
             "fqsen": "\\App\\Controller\\BookController\u003A\u003AcreateBookForm\u0028\u0029",
             "name": "createBookForm",
             "summary": "Displays\u0020form\u0020for\u0020creating\u0020a\u0020new\u0020book.",
@@ -365,6 +360,16 @@ Search.appendIndex(
             "name": "destroySession",
             "summary": "",
             "url": "classes/App-Controller-RouteControllerTwig.html#method_destroySession"
+        },                {
+            "fqsen": "\\App\\Controller\\RouteControllerTwig\u003A\u003Ametrics\u0028\u0029",
+            "name": "metrics",
+            "summary": "",
+            "url": "classes/App-Controller-RouteControllerTwig.html#method_metrics"
+        },                {
+            "fqsen": "\\App\\Controller\\RouteControllerTwig\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "Landing\u0020page.",
+            "url": "classes/App-Controller-RouteControllerTwig.html#method_index"
         },                {
             "fqsen": "\\App\\Dice\\Dice",
             "name": "Dice",
@@ -661,6 +666,16 @@ Search.appendIndex(
             "summary": "Find\u0020all\u0020producs\u0020having\u0020a\u0020value\u0020above\u0020the\u0020specified\u0020one\u0020with\u0020SQL.",
             "url": "classes/App-Repository-ProductRepository.html#method_findByMinimumValue2"
         },                {
+            "fqsen": "\\App\\Trait\\DeckManagerTrait",
+            "name": "DeckManagerTrait",
+            "summary": "",
+            "url": "classes/App-Trait-DeckManagerTrait.html"
+        },                {
+            "fqsen": "\\App\\Trait\\DeckManagerTrait\u003A\u003AgetOrCreateDeck\u0028\u0029",
+            "name": "getOrCreateDeck",
+            "summary": "",
+            "url": "classes/App-Trait-DeckManagerTrait.html#method_getOrCreateDeck"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -700,5 +715,10 @@ Search.appendIndex(
             "name": "Repository",
             "summary": "",
             "url": "namespaces/app-repository.html"
+        },                {
+            "fqsen": "\\App\\Trait",
+            "name": "Trait",
+            "summary": "",
+            "url": "namespaces/app-trait.html"
         }            ]
 );
