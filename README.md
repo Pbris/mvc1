@@ -30,7 +30,7 @@ Welcome to my Symfony-based website. This project is made to show various featur
 
 
 ## Website Routes
-- **Home (/)**
+- **Home (/presentation)**
   - Provides a presentation of the creator.
 
 - **About (/about)**
