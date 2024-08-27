@@ -30,12 +30,12 @@ class BlackjackApiController extends AbstractController
             ],
             [
                 'path' => '/api/game/hit',
-                'description' => 'Utför en "hit"-åtgärd',
+                'description' => 'Utför en "hit"-åtgärd på nuvarande hand',
                 'url' => $urlGenerator->generate('api_game_hit', [], UrlGeneratorInterface::ABSOLUTE_URL),
             ],
             [
                 'path' => '/api/game/stand',
-                'description' => 'Utför en "stand"-åtgärd',
+                'description' => 'Utför en "stand"-åtgärd på nuvarande hand',
                 'url' => $urlGenerator->generate('api_game_stand', [], UrlGeneratorInterface::ABSOLUTE_URL),
             ],
             [
