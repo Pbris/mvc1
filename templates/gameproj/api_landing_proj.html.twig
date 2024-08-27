@@ -1,0 +1,18 @@
+{% extends "proj.html.twig" %}
+
+{% block title %}API landing page{% endblock %}
+
+{% block body %}
+    <h1>JSON routes</h1>
+    <ul>
+    {% for route in jsonRoutes %}
+        <li>
+            <strong>Route:</strong>
+            {% if route.url is defined %}
+            <a href="{{ route.url }}">{{ route.path }}</a>
+            {% endif %}<br>
+            <strong>Description:</strong> {{ route.description }}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "proj.html.twig" %}
+
+{% block title %}Blackjack - Play{% endblock %}
+
+{% block body %}
+<h1>Blackjack</h1>
+<h2>{{ playerName }}'s Game</h2>
+<p>Current Bank Balance: ${{ playerBank|number_format(2, '.', ',') }}</p>
+
+{% for i, hand in hands %}
+    <h3>Hand {{ i + 1 }} {% if isComputerHand[i] %}(Computer){% endif %} (Value: {{ handValues[i] }})</h3>
+    <ul>
+        {% for card in hand.hand %}
+            <li>{{ card.getAsString() }}</li>
+        {% endfor %}
+    </ul>
+    {% if hand.status == 'blackjack' %}
+        <p><strong>Blackjack!</strong></p>
+    {% endif %}
+    <p>Bust Probability: {{ (bustProbabilities[i] * 100)|number_format(2) }}%</p>
+    <p>Current Bet: ${{ hand.bet }}</p>
+{% endfor %}
+
+<h3>Dealer's Hand (Value: {{ dealerValue }})</h3>
+<ul>
+    {% for card in dealerHand %}
+        <li>{{ card.getAsString() }}</li>
+    {% endfor %}
+</ul>
+{% if dealerHand.status is defined and dealerHand.status == 'blackjack' %}
+    <p><strong>Dealer Blackjack!</strong></p>
+{% endif %}
+
+{% if currentHand is not null and not isComputerHand[currentHand] %}
+    <p>Current Hand: {{ currentHand + 1 }}</p>
+    <a href="{{ path('game_hit_proj') }}">Hit</a>
+    <a href="{{ path('game_stand_proj') }}">Stand</a>
+{% endif %}
+
+<a href="{{ path('game_play_again_proj') }}">Play Again</a>
+{% endblock %}

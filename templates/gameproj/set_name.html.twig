@@ -1,0 +1,12 @@
+{% extends "proj.html.twig" %}
+
+{% block title %}Blackjack - Set Name{% endblock %}
+
+{% block body %}
+<h1>Welcome to Blackjack</h1>
+<form action="{{ path('set_name') }}" method="post">
+    <label for="player_name">Your Name:</label>
+    <input type="text" name="player_name" id="player_name" required>
+    <button type="submit">Set Name</button>
+</form>
+{% endblock %}

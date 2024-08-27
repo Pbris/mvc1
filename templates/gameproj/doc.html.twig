@@ -1,0 +1,21 @@
+{% extends "proj.html.twig" %}
+
+{% block title %}Documentation{% endblock %}
+
+{% block body %}
+<h1>Projekt Blackjack</h1>
+<p>Denna applikation byggdes i PHP som slutprojekt i kursen MVC (DV1608). Det är ett Blackjack-spel där man spelar 1-3 händer mot banken. Spelet är byggt för att vara något mer avancerat, med möjlighet till datorassisterad hjälp med en hand, samt statistikpresentation av risk för att gå ”bust” för varje drag.</p>
+
+<h2>Tekniker/verktyg:</h2>
+<ul>
+    <li><p>Webbramverket som används är <strong>Symfony</strong>.</p></li>
+    <li><p>För att analysera kodkvaliteten har <strong>PHPMetrics</strong> och <strong>Scrutinizer</strong> använts.</p></li>
+    <li><p>För att PS12-kodstandard ska följas har <strong>PHP CS Fixer</strong> använts.</p></li>
+    <li><p><strong>PHPMD</strong> och <strong>PHPStan</strong> har använts som linters och för mess detection.</p></li>
+    <li><p>Slutligen har också <strong>PHPDoc</strong> använts för att generera dokumentation från koden.</p></li>
+</ul>
+
+<h2>Spelregler:</h2>
+<p>Enligt instruktionen har jag läst in mig på de riktiga spelreglerna för blackjack och implementerat spelet därefter. (<a href="https://en.wikipedia.org/wiki/Blackjack">https://en.wikipedia.org/wiki/Blackjack</a>) Reglerna varierar dock, men nedan förtydligas vilka regler jag valt att använda där det är mer tveksamt. Mitt spel spelas med 4 kortlekar. Dealern behöver dra kort till 17 eller mer, och måste räkna ett ess som 11. Vid Blackjack (handvärde 21 första 2 korten) så spelas rundan klart för eventuella övriga händer. Därefter undersöks om även dealern fick blackjack, vilket innebär återställning av bet (lika). Annars ges handen 2.5 gånger insatsen för sin blackjack. Får dealern blackjack ensam vinner denna oavsett om spelarens hand är värd 21. Jag har utelämnat möjlighet till split, double, och insurance.</p>
+
+{% endblock %}
