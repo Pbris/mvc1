@@ -65,9 +65,9 @@ class BlackjackGameProjEndTest extends TestCase
         $game = new BlackjackGameProj('Player', 1000.00, 2, 20.00);
         $game->dealInitialCards();
 
-        while ($game->getCurrentHand() !== null) {
-            $currentHand = $game->getCurrentHand();
-            $game->standHand($currentHand);
+        for ($i = 0; $i < 2; $i++) {
+            $this->assertNotNull($game->getCurrentHand());
+            $game->standHand($game->getCurrentHand());
             $game->nextHand();
         }
 
