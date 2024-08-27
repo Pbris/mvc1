@@ -42,7 +42,7 @@ class DeckTest extends TestCase
         // Check 4 suits
         $this->assertCount(4, $cards);
 
-        foreach ($cards as $suit => $cardsInSuit) {
+        foreach ($cards as $cardsInSuit) {
             $this->assertCount(13, $cardsInSuit);
         }
     }
