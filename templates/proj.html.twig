@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/glider.svg') }}">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="body-proj">
+
+        <header class="site-header" style="background-image: url({{ asset('img/cards.jpg') }}); background-size: cover; height: 250px; background-position: center;">
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ path('proj') }}">Project</a></li>
+                <li><a href="{{ path('about_proj') }}">About</a></li>
+                <li><a href="{{ path('api_landing_proj') }}">JSON API</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-proj">
+        {% block body %}{% endblock %}
+        </main>
+
+        <footer style="background-image: url({{ asset('img/footer.jpg') }}); background-size: cover; height: 100px; background-position: center;">
+        <p>
+            Footer text for design purposes.
+        </p>
+        </footer>
+    </body>
+</html>
