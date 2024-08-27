@@ -65,15 +65,15 @@ The repo contains the code for the course’s all 7 parts. In the course we’ve
 - **Card game (/card)**
   - Base for card game.
 
-- ** Blackjack (/game)**
+- **Blackjack (/game)**
   - Initial basic Blackjack game, 1 hand vs dealer.
 
-- ** Library (/library)**
+- **Library (/library)**
   - Simple library database using Doctrine.
 
 
-- ** Metrics (/metrics)**
+- **Metrics (/metrics)**
   - Code quality analysis.
 
-- ** Project (/proj)**
+- **Project (/proj)**
   - Final project, more advanced Blackjack game. Also including new navbar with routes for JSON API related to project (/api), and description of project (/doc).
