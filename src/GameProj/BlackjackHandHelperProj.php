@@ -134,10 +134,16 @@ class BlackjackHandHelperProj
      */
     public function shouldComputerHit(string $computerStrategy, int $handValue, array $hand): bool
     {
-        if ($computerStrategy === 'smart' && $handValue < 18) {
-            return $this->handHasAce($hand);
+        if ($computerStrategy === 'smart') {
+            if ($handValue < 17) {
+                return true;
+            }
+            if ($handValue == 17 && $this->handHasAce($hand)) {
+                return true;
+            }
+            return false;
         }
-
+    
         return $handValue < 17;
     }
 
