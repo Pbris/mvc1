@@ -241,9 +241,10 @@ class BlackjackHandManagerProj
                 if ($this->getHandValue($hand['hand']) > 21) {
                     $hand['status'] = 'busted';
                 }
-            } else {
-                $hand['status'] = 'standing';
+                continue;
             }
+
+            $hand['status'] = 'standing';
         }
     }
 
