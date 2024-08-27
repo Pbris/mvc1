@@ -227,15 +227,15 @@ class BlackjackHandManagerProj
         if ($computerHandIndex === null) {
             return;
         }
-    
+
         $hand = &$this->hands[$computerHandIndex];
         if ($hand['status'] !== 'playing') {
             return;
         }
-    
+
         while ($hand['status'] === 'playing') {
             $handValue = $this->getHandValue($hand['hand']);
-    
+
             if ($this->helper->shouldComputerHit($computerStrategy, $handValue, $hand['hand'])) {
                 $hand['hand'][] = $deck->drawCard();
                 if ($this->getHandValue($hand['hand']) > 21) {

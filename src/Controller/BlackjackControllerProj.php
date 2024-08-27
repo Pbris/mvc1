@@ -67,15 +67,15 @@ class BlackjackControllerProj extends AbstractController
         if (!$session->has('game')) {
             return $this->redirectToRoute('proj');
         }
-    
+
         $game = $session->get('game');
-    
+
         $currentHand = $game->getCurrentHand();
         if ($currentHand !== null && $game->isComputerHand($currentHand)) {
             $game->playComputerHand();
             $game->nextHand();
         }
-    
+
         if ($game->isGameOver()) {
             $game->finishGame();
             $session->set('game', $game);

@@ -70,7 +70,7 @@ class BlackjackGameProjEndTest extends TestCase
             $this->assertIsInt($currentHand);
             $this->assertGreaterThanOrEqual(0, $currentHand);
             $this->assertLessThan(2, $currentHand);
-    
+
             $game->standHand($currentHand);
             $game->nextHand();
             $handCount++;

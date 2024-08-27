@@ -5,6 +5,9 @@ namespace App\GameProj;
 use App\Card\DeckProj;
 use App\Card\Card;
 
+/**
+ * Helper class for more advanced Blackjack hand operations.
+ */
 class BlackjackHandHelperProj
 {
     /**
@@ -143,7 +146,7 @@ class BlackjackHandHelperProj
             }
             return false;
         }
-    
+
         return $handValue < 17;
     }
 
