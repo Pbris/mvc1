@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1724762037">
-  <project timestamp="1724762037">
+<coverage generated="1724770018">
+  <project timestamp="1724770018">
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="7" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="15" coveredelements="15"/>
@@ -17,9 +17,9 @@
       <line num="63" type="method" name="getBlackjackValue" visibility="public" complexity="3" crap="3" count="6"/>
       <line num="65" type="stmt" count="6"/>
       <line num="66" type="stmt" count="6"/>
-      <line num="69" type="stmt" count="5"/>
+      <line num="69" type="stmt" count="6"/>
       <line num="70" type="stmt" count="4"/>
-      <line num="73" type="stmt" count="3"/>
+      <line num="73" type="stmt" count="4"/>
       <metrics loc="76" ncloc="45" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="15" coveredelements="15"/>
     </file>
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/Card/CardGraphic.php">
@@ -270,7 +270,7 @@
     </file>
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/Controller/BlackjackControllerProj.php">
       <class name="App\Controller\BlackjackControllerProj" namespace="global">
-        <metrics complexity="23" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="92" coveredstatements="0" elements="101" coveredelements="0"/>
+        <metrics complexity="21" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="90" coveredstatements="0" elements="99" coveredelements="0"/>
       </class>
       <line num="14" type="method" name="doc" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="17" type="stmt" count="0"/>
@@ -307,17 +307,17 @@
       <line num="73" type="stmt" count="0"/>
       <line num="74" type="stmt" count="0"/>
       <line num="75" type="stmt" count="0"/>
-      <line num="77" type="stmt" count="0"/>
-      <line num="78" type="stmt" count="0"/>
+      <line num="76" type="stmt" count="0"/>
       <line num="79" type="stmt" count="0"/>
       <line num="80" type="stmt" count="0"/>
-      <line num="84" type="stmt" count="0"/>
+      <line num="81" type="stmt" count="0"/>
+      <line num="82" type="stmt" count="0"/>
       <line num="85" type="stmt" count="0"/>
       <line num="86" type="stmt" count="0"/>
-      <line num="88" type="stmt" count="0"/>
+      <line num="87" type="stmt" count="0"/>
       <line num="89" type="stmt" count="0"/>
       <line num="90" type="stmt" count="0"/>
-      <line num="93" type="stmt" count="0"/>
+      <line num="91" type="stmt" count="0"/>
       <line num="94" type="stmt" count="0"/>
       <line num="95" type="stmt" count="0"/>
       <line num="96" type="stmt" count="0"/>
@@ -328,52 +328,50 @@
       <line num="101" type="stmt" count="0"/>
       <line num="102" type="stmt" count="0"/>
       <line num="103" type="stmt" count="0"/>
-      <line num="106" type="method" name="hit" visibility="public" complexity="5" crap="30" count="0"/>
-      <line num="109" type="stmt" count="0"/>
+      <line num="104" type="stmt" count="0"/>
+      <line num="107" type="method" name="hit" visibility="public" complexity="3" crap="12" count="0"/>
       <line num="110" type="stmt" count="0"/>
       <line num="111" type="stmt" count="0"/>
-      <line num="113" type="stmt" count="0"/>
+      <line num="112" type="stmt" count="0"/>
       <line num="114" type="stmt" count="0"/>
-      <line num="117" type="stmt" count="0"/>
+      <line num="115" type="stmt" count="0"/>
       <line num="118" type="stmt" count="0"/>
       <line num="119" type="stmt" count="0"/>
-      <line num="122" type="stmt" count="0"/>
-      <line num="123" type="stmt" count="0"/>
+      <line num="120" type="stmt" count="0"/>
+      <line num="121" type="stmt" count="0"/>
       <line num="124" type="stmt" count="0"/>
       <line num="125" type="stmt" count="0"/>
-      <line num="128" type="stmt" count="0"/>
-      <line num="129" type="stmt" count="0"/>
-      <line num="132" type="method" name="stand" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="128" type="method" name="stand" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="131" type="stmt" count="0"/>
+      <line num="132" type="stmt" count="0"/>
+      <line num="133" type="stmt" count="0"/>
       <line num="135" type="stmt" count="0"/>
       <line num="136" type="stmt" count="0"/>
       <line num="137" type="stmt" count="0"/>
-      <line num="139" type="stmt" count="0"/>
-      <line num="140" type="stmt" count="0"/>
+      <line num="138" type="stmt" count="0"/>
       <line num="141" type="stmt" count="0"/>
       <line num="142" type="stmt" count="0"/>
-      <line num="145" type="stmt" count="0"/>
-      <line num="146" type="stmt" count="0"/>
-      <line num="149" type="method" name="result" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="152" type="stmt" count="0"/>
+      <line num="145" type="method" name="result" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="148" type="stmt" count="0"/>
+      <line num="150" type="stmt" count="0"/>
+      <line num="151" type="stmt" count="0"/>
+      <line num="153" type="stmt" count="0"/>
       <line num="154" type="stmt" count="0"/>
-      <line num="155" type="stmt" count="0"/>
       <line num="157" type="stmt" count="0"/>
       <line num="158" type="stmt" count="0"/>
+      <line num="159" type="stmt" count="0"/>
+      <line num="160" type="stmt" count="0"/>
       <line num="161" type="stmt" count="0"/>
       <line num="162" type="stmt" count="0"/>
       <line num="163" type="stmt" count="0"/>
       <line num="164" type="stmt" count="0"/>
       <line num="165" type="stmt" count="0"/>
-      <line num="166" type="stmt" count="0"/>
-      <line num="167" type="stmt" count="0"/>
-      <line num="168" type="stmt" count="0"/>
-      <line num="169" type="stmt" count="0"/>
-      <line num="172" type="method" name="playAgain" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="175" type="stmt" count="0"/>
-      <line num="176" type="stmt" count="0"/>
-      <line num="177" type="stmt" count="0"/>
-      <line num="178" type="stmt" count="0"/>
-      <metrics loc="181" ncloc="181" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="92" coveredstatements="0" elements="101" coveredelements="0"/>
+      <line num="168" type="method" name="playAgain" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="171" type="stmt" count="0"/>
+      <line num="172" type="stmt" count="0"/>
+      <line num="173" type="stmt" count="0"/>
+      <line num="174" type="stmt" count="0"/>
+      <metrics loc="177" ncloc="177" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="90" coveredstatements="0" elements="99" coveredelements="0"/>
     </file>
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/Controller/BookController.php">
       <class name="App\Controller\BookController" namespace="global">
@@ -923,7 +921,7 @@
     </file>
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/GameProj/BlackjackHandHelperProj.php">
       <class name="App\GameProj\BlackjackHandHelperProj" namespace="global">
-        <metrics complexity="34" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="61" coveredstatements="54" elements="69" coveredelements="59"/>
+        <metrics complexity="36" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="57" elements="73" coveredelements="62"/>
       </class>
       <line num="16" type="method" name="getHandValue" visibility="public" complexity="5" crap="5" count="8"/>
       <line num="18" type="stmt" count="8"/>
@@ -931,11 +929,11 @@
       <line num="21" type="stmt" count="8"/>
       <line num="22" type="stmt" count="8"/>
       <line num="23" type="stmt" count="8"/>
-      <line num="24" type="stmt" count="4"/>
+      <line num="24" type="stmt" count="5"/>
       <line num="26" type="stmt" count="8"/>
       <line num="29" type="stmt" count="8"/>
-      <line num="30" type="stmt" count="1"/>
-      <line num="31" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="3"/>
+      <line num="31" type="stmt" count="3"/>
       <line num="34" type="stmt" count="8"/>
       <line num="44" type="method" name="getBustProbability" visibility="public" complexity="9" crap="9.01" count="2"/>
       <line num="46" type="stmt" count="2"/>
@@ -971,34 +969,38 @@
       <line num="119" type="stmt" count="1"/>
       <line num="122" type="stmt" count="2"/>
       <line num="124" type="stmt" count="2"/>
-      <line num="135" type="method" name="shouldComputerHit" visibility="public" complexity="3" crap="3.33" count="1"/>
+      <line num="135" type="method" name="shouldComputerHit" visibility="public" complexity="5" crap="5.58" count="1"/>
       <line num="137" type="stmt" count="1"/>
       <line num="138" type="stmt" count="1"/>
-      <line num="141" type="stmt" count="0"/>
-      <line num="151" type="method" name="settleBets" visibility="public" complexity="2" crap="2" count="1"/>
-      <line num="153" type="stmt" count="1"/>
-      <line num="154" type="stmt" count="1"/>
-      <line num="155" type="stmt" count="1"/>
-      <line num="157" type="stmt" count="1"/>
-      <line num="158" type="stmt" count="1"/>
+      <line num="139" type="stmt" count="1"/>
+      <line num="141" type="stmt" count="1"/>
+      <line num="142" type="stmt" count="1"/>
+      <line num="144" type="stmt" count="0"/>
+      <line num="147" type="stmt" count="0"/>
+      <line num="157" type="method" name="settleBets" visibility="public" complexity="2" crap="2" count="1"/>
+      <line num="159" type="stmt" count="1"/>
+      <line num="160" type="stmt" count="1"/>
       <line num="161" type="stmt" count="1"/>
-      <line num="172" type="method" name="settleSingleHandBet" visibility="private" complexity="7" crap="11.60" count="1"/>
-      <line num="174" type="stmt" count="1"/>
-      <line num="175" type="stmt" count="1"/>
-      <line num="177" type="stmt" count="1"/>
-      <line num="178" type="stmt" count="0"/>
-      <line num="179" type="stmt" count="0"/>
-      <line num="181" type="stmt" count="0"/>
-      <line num="184" type="stmt" count="1"/>
+      <line num="163" type="stmt" count="1"/>
+      <line num="164" type="stmt" count="1"/>
+      <line num="167" type="stmt" count="1"/>
+      <line num="178" type="method" name="settleSingleHandBet" visibility="private" complexity="7" crap="11.60" count="1"/>
+      <line num="180" type="stmt" count="1"/>
+      <line num="181" type="stmt" count="1"/>
+      <line num="183" type="stmt" count="1"/>
+      <line num="184" type="stmt" count="0"/>
       <line num="185" type="stmt" count="0"/>
-      <line num="188" type="stmt" count="1"/>
-      <line num="189" type="stmt" count="0"/>
-      <line num="192" type="stmt" count="1"/>
-      <metrics loc="195" ncloc="141" classes="1" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="61" coveredstatements="54" elements="69" coveredelements="59"/>
+      <line num="187" type="stmt" count="0"/>
+      <line num="190" type="stmt" count="1"/>
+      <line num="191" type="stmt" count="0"/>
+      <line num="194" type="stmt" count="1"/>
+      <line num="195" type="stmt" count="0"/>
+      <line num="198" type="stmt" count="1"/>
+      <metrics loc="201" ncloc="147" classes="1" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="57" elements="73" coveredelements="62"/>
     </file>
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/GameProj/BlackjackHandManagerProj.php">
       <class name="App\GameProj\BlackjackHandManagerProj" namespace="global">
-        <metrics complexity="42" methods="20" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="62" coveredstatements="58" elements="82" coveredelements="74"/>
+        <metrics complexity="43" methods="20" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="64" coveredstatements="59" elements="84" coveredelements="75"/>
       </class>
       <line num="33" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="16"/>
       <line num="35" type="stmt" count="16"/>
@@ -1021,7 +1023,7 @@
       <line num="75" type="stmt" count="0"/>
       <line num="78" type="stmt" count="3"/>
       <line num="79" type="stmt" count="3"/>
-      <line num="80" type="stmt" count="2"/>
+      <line num="80" type="stmt" count="3"/>
       <line num="90" type="method" name="standHand" visibility="public" complexity="3" crap="3" count="4"/>
       <line num="92" type="stmt" count="4"/>
       <line num="93" type="stmt" count="1"/>
@@ -1056,33 +1058,35 @@
       <line num="212" type="stmt" count="2"/>
       <line num="213" type="stmt" count="2"/>
       <line num="214" type="stmt" count="2"/>
-      <line num="225" type="method" name="playComputerHand" visibility="public" complexity="5" crap="5.02" count="2"/>
+      <line num="225" type="method" name="playComputerHand" visibility="public" complexity="6" crap="6.13" count="2"/>
       <line num="227" type="stmt" count="2"/>
       <line num="228" type="stmt" count="1"/>
       <line num="231" type="stmt" count="1"/>
       <line num="232" type="stmt" count="1"/>
-      <line num="233" type="stmt" count="1"/>
-      <line num="235" type="stmt" count="1"/>
+      <line num="233" type="stmt" count="0"/>
       <line num="236" type="stmt" count="1"/>
       <line num="237" type="stmt" count="1"/>
-      <line num="238" type="stmt" count="1"/>
+      <line num="239" type="stmt" count="1"/>
       <line num="240" type="stmt" count="1"/>
-      <line num="243" type="stmt" count="0"/>
-      <line num="250" type="method" name="checkForBlackjack" visibility="public" complexity="4" crap="4.13" count="1"/>
-      <line num="252" type="stmt" count="1"/>
-      <line num="253" type="stmt" count="1"/>
-      <line num="254" type="stmt" count="1"/>
+      <line num="241" type="stmt" count="1"/>
+      <line num="242" type="stmt" count="1"/>
+      <line num="244" type="stmt" count="1"/>
+      <line num="247" type="stmt" count="0"/>
+      <line num="254" type="method" name="checkForBlackjack" visibility="public" complexity="4" crap="4.13" count="1"/>
+      <line num="256" type="stmt" count="1"/>
+      <line num="257" type="stmt" count="1"/>
       <line num="258" type="stmt" count="1"/>
-      <line num="259" type="stmt" count="0"/>
-      <line num="269" type="method" name="hasBlackjack" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="271" type="stmt" count="1"/>
-      <line num="279" type="method" name="settleBets" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="281" type="stmt" count="1"/>
-      <line num="290" type="method" name="setPlayerHand" visibility="public" complexity="1" crap="1" count="4"/>
-      <line num="292" type="stmt" count="4"/>
-      <line num="300" type="method" name="setDealerHand" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="302" type="stmt" count="0"/>
-      <metrics loc="305" ncloc="188" classes="1" methods="20" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="62" coveredstatements="58" elements="82" coveredelements="74"/>
+      <line num="262" type="stmt" count="1"/>
+      <line num="263" type="stmt" count="0"/>
+      <line num="273" type="method" name="hasBlackjack" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="275" type="stmt" count="1"/>
+      <line num="283" type="method" name="settleBets" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="285" type="stmt" count="1"/>
+      <line num="294" type="method" name="setPlayerHand" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="296" type="stmt" count="4"/>
+      <line num="304" type="method" name="setDealerHand" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="306" type="stmt" count="0"/>
+      <metrics loc="309" ncloc="192" classes="1" methods="20" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="64" coveredstatements="59" elements="84" coveredelements="75"/>
     </file>
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/Kernel.php">
       <class name="App\Kernel" namespace="global">
@@ -1137,6 +1141,6 @@
       <line num="15" type="stmt" count="0"/>
       <metrics loc="18" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
     </file>
-    <metrics files="26" loc="2710" ncloc="2211" classes="25" methods="170" coveredmethods="72" conditionals="0" coveredconditionals="0" statements="810" coveredstatements="223" elements="980" coveredelements="295"/>
+    <metrics files="26" loc="2716" ncloc="2217" classes="25" methods="170" coveredmethods="72" conditionals="0" coveredconditionals="0" statements="814" coveredstatements="227" elements="984" coveredelements="299"/>
   </project>
 </coverage>

@@ -903,7 +903,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\GameProj\\BlackjackHandHelperProj",
             "name": "BlackjackHandHelperProj",
-            "summary": "",
+            "summary": "Helper\u0020class\u0020for\u0020more\u0020advanced\u0020Blackjack\u0020hand\u0020operations.",
             "url": "classes/App-GameProj-BlackjackHandHelperProj.html"
         },                {
             "fqsen": "\\App\\GameProj\\BlackjackHandHelperProj\u003A\u003AgetHandValue\u0028\u0029",
