@@ -3,6 +3,11 @@
     background-size: cover;
 } */
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     height: 150px;
 }
@@ -11,6 +16,7 @@ main {
     margin: 0 auto;
     max-width: 800px;
     min-height: 80vh;
+    padding-bottom: 20px;
 }
 
 h1 {
@@ -98,6 +104,7 @@ img {
 /* Font style */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 p {
     font-family: 'Source Sans 3', sans-serif;
@@ -110,6 +117,10 @@ h2,
 h3,
 h4,
 a {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
     font-family: 'Source Sans 3', sans-serif;
 }
 
@@ -117,7 +128,6 @@ a {
 footer {
     display: flex;
     justify-content: space-between;
-    border-top: 4px solid black;
     background-color: grey;
     padding: 4rem 6rem;
 
@@ -150,4 +160,59 @@ footer {
 }
 .flash-warning:before {
     content: "⚠";
+}
+
+/* Project */
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #ccc;
+    text-decoration: none;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: black;
+}
+
+.nav a:hover {
+    outline: 2px solid #ccc;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em 0;
+    list-style: none;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0.001px !important;
+    margin-block-end: 0.001px !important;
+    margin-inline-start: 0.001px;
+    margin-inline-end: 0.001px;
+    padding-inline-start: 40px;
+}
+
+.nav ul li {
+    padding: 0.5em !important;
+}
+
+.main-proj {
+    color: #dddddd;
+}
+
+.main-proj a {
+    color: #1e90ff !important;
+}
+
+.body-proj {
+    background-color: #262626;
 }
