@@ -141,7 +141,7 @@ class BlackjackHandHelperProj
             if ($handValue < 17) {
                 return true;
             }
-            if ($handValue == 17 && $this->handHasAce($hand)) {
+            if ($handValue < 18 && $this->handHasAce($hand)) {
                 return true;
             }
             return false;
