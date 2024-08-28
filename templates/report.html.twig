@@ -3,7 +3,7 @@
 {% block title %}Report{% endblock %}
 
 {% block body %}
-        <h4>Innehållsförteckning</h4>
+        <h3>Innehållsförteckning</h3>
         <ul>
             <li><strong><a href="#kmom01">kmom01</a></strong></li>
             <li><strong><a href="#kmom02">kmom02</a></strong></li>
@@ -14,9 +14,9 @@
             <li><strong><a href="#kmom10">kmom10</a></strong></li>
         </ul>
 
-    <h2>Redovisning</h2>
+    <h1>Redovisning</h1>
 
-    <h3 id="kmom01">kmom01</h3>
+    <h2 id="kmom01">Kmom01</h2>
 
     <p>
     De kunskaper och tidigare erfarenheter jag har från objektorientering är främst ifrån den kurs i objektorienterad python jag nyss genomgått. Där upplever jag att jag fått en god grund att stå på, och känner mig någorlunda bekväm i begrepp som klasser, klassdiagram, arv, etc, vilka vi delvis använt i kmom01 och som jag anar kommer att återkomma mer senare i denna kurs. Även om jag troligen kommer behöva repetera vissa delar känns det lovande att ha förstått grunderna i objektorientering i stort tidigare.
@@ -34,7 +34,7 @@
     </p>
 
 
-    <h3 id="kmom02">kmom02</h3>
+    <h2 id="kmom02">Kmom02</h2>
 
     <p>
     Arv, komposition, interface och trait är alla konstruktioner som används för att strukturera kod i PHP objektorienterat.
@@ -52,7 +52,7 @@
     </p>
 
 
-    <h3 id="kmom03">kmom03</h3>
+    <h2 id="kmom03">Kmom03</h2>
 
     <p>
     Mitt arbete med att modellera ett kortspel med flödesdiagram och pseudokod var intressant och ett någorlunda nytt sätt att ta sig an en uppgift för mig. Även om det initialt kändes lite tidskrävande så upplevde jag att ens bild av helheten etablerades tydligare. Något jag sedan märkte sparade tid för mig i mitt arbete, då det var tydligare för mig vad den större planen var i varje mindre steg. För att kunna lägga upp en hållbar plan var jag också tvungen att läsa in mig något mer på objektorienterad PHP, vilket jag är tacksam för i efterhand. 
@@ -62,7 +62,7 @@
     </p>
 
 
-    <h3 id="kmom04">kmom04</h3>
+    <h2 id="kmom04">Kmom04</h2>
 
     <p>
     Att skriva testkod och använda PHPUnit för att köra denna var något som var relativt bekant för mig efter att ha gjort liknande i ”oopython”-kursen. Jag uppskattar det överlag och tycker det är något som forcerar en att skapa en djupare förståelse för både potentiella fel i ens kod och ens kod i stort.
@@ -74,7 +74,7 @@
     </p>
 
 
-    <h3 id="kmom05">kmom05</h3>
+    <h2 id="kmom05">Kmom05</h2>
 
     <p>
     Övningen för Symfony och Doctrine var givande och gick bra att arbeta igenom. Det var intressant hur man även kunde skriva custom querys i repository, vilket vidgar möjligheterna. 
@@ -85,7 +85,7 @@
     </p>
 
 
-    <h3 id="kmom06">kmom06</h3>
+    <h2 id="kmom06">Kmom06</h2>
 
     <p>
     Jag uppfattade verktyget phpmetrics som intuitivt och guidande. Överblicken generellt var givande och specifikt treemap-diagrammet ”Maintainability/complexity” uppskattade jag mycket. Den formen av överblick över sin kodbas känns klart värdefull, och jag kunde snabbt se över hur det kom sig att vissa filer blev större och fick sämre betyg. Med detta var det enkelt att gå igenom sin kod och skaffa sig en uppfattning om dessa sämre betyg gick att motivera eller om det fanns åtgärder att vidta.
@@ -94,8 +94,50 @@
     <br><br>Min TIL för kursmomentet är troligen existensen av dessa automatiserade verktyg för kodgranskning, och hur utförliga och snabba rapporter man kan få av dem. Så länge man har begränsningarna i åtanke är det absolut värdefulla verktyg att nyttja kontinuerligt i sitt webbprogrammerande. Det är något jag tar med mig inför framtida projekt.
     </p>
 
-    <h3 id="kmom10">kmom10</h3>
+    <h2 id="kmom10">Kmom10</h2>
 
-    <p>Här kommer redovisningstexten för detta kursmoment.</p>
+    <p>
+        <strong>Krav 1-3</strong><br>
+        <strong>Projektidé</strong><br>
+        Jag valde projektidén kortspel och att i detta vidareutveckla mitt Blackjack-spel, som tidigare var enkelt, för spel med en hand, och mer likt ett 21-spel. I min utvecklade variant utförs spelet med 4 kortlekar, och är möjligt att spela med 1-3 händer, och även låta en datorspelare spela en hand. Datorspelarens ”intelligens” kan justeras. Man kan även satsa pengar från sin ”bank”.<br><br>
+        För att göra detta möjligt skapade jag tre modeller för kortspelet: huvudmodellen BlackjackGameProj, vilken sköter spelet överlag, men delegerar ut mer specifika uppgifter till BlackjackHandManagerProj och BlackjackHandHelperProj. Detta med ambitionen att koden ska bli både mer överskådlig och lättunderhållen.<br><br>
+        Jag utgick från samma grund i BlackjackGameProj men la till ett antal nya metoder och modifierade de allra flesta tidigare för att kunna hantera det nya kortspelet. De större nya metoderna som lades till är getBustProbability(), playComputerHand(), och settleBets().<br><br>
+        getBustProbability() beräknar ”busting”-risk vid ett nästa kort, detta genom att beräkna ”$safeValue” för aktuellt kort(21 – handvärde), och sedan iterera genom resterande kort i lekarna för att få en sannolikhet. Jag undersöker initialt om handen innehåller ess och justerar isåfall sannolikheten genom att ge kortet värde 1 istället för 11.<br><br>
+        playComputerHand() ansvarar för att låta datorn spela en hand. Väljs datorhanden vid spelstart ges den alltid den sista handens index när spelet startas i controllern. I metoden spelas sedan handen som dealern (slutar dra kort vid 17 eller mer), men det finns också möjlighet att välja datorintelligens vid spelstart. Väljs denna till ”smart” undersöks vid ett handvärde på 17 om handen innehåller ett ess (som kan vara värde 1 eller 11), och ytterligare kort fortsätter dras. Något inte dealern får göra enligt min regeltolkning (detta varierar dock).<br><br>
+        settleBets() hanterar justering av banken efter spelrundans slut. Denna metod använder sig även av hjälpmetoder för att bl a undersöka om spelaren har blackjack, vilket enligt reglerna ger en avkastning på 2.5 (om inte dealer också har blackjack, vilket också undersöks). I övrigt görs jämförelser med händerna gentemot dealern och banken justeras enligt reglerna.
+    </p>
+    
+    <p>
+        <strong>Innehåll och utseende</strong><br>
+        För att skapa en ny stil för mitt projekt, som skiljer sig från min report-sida, så skapade jag nya css-klasser vilka användes i min template-fil för projektet. Jag stylade även header och footer med nya hero image-aktiga bilder, samt skapade en ny och omstylad navbar, med nytt typsnitt. Jag ändrade även typsnitt för headers, något som jag dock valde för både report och projekt. Min ambition var ett mörkare och mer stilrent tema för min projekt-sida vilket jag tycker jag uppnådde.
+    </p>
+    
+    <p>
+        <strong>Repo och dokumentation</strong><br>
+        Min README.md för mitt git rep innehöll redan klickbara badges till Scrutinizer, men jag uppdaterade denna beskrivning av projektinnehållet, samt såg över instruktionerna för hur man klonar och startar igång webbplatsen.<br><br>
+        I mitt arbete med kodtäckning skapade jag testsviter för samtliga tillagda modeller i projektet, inklusive både klasser och metoder. För GameProj-mappen i src/ uppnådde jag en kodtäckning på 90,85%, och för min Card-mapp uppnåddes 100%. Jag behövde använda betydligt fler mocks och stubs än i tidigare testarbete, men det var givande att få fördjupa mig i dessa tekniker.<br><br>
+        Jag såg till att få godtagbara rapporter för Scrutinizer och PHPMetrics, vilka jag är nöjd med överlag. Främst komplexiteten ökade något vilket var väntat, men jag lyckades ändå hålla nere denna någorlunda med min uppdelning av koden.
+    </p>
+    
+    <p>
+        <strong>Krav 4</strong><br>
+        För krav 4 skapade jag ett JSON API till mitt projekt som presenteras i proj/api.<br><br>
+        Liksom i kursmoment 05 skapade jag klickbara länkar för min genom användning av UrlGeneratorInterface som finns tillgängligt i Symfony. Jag skapade en POST-route i form av min startGame-route där jag startar ett spel, som tillsammans med ett par default-värden sparas i sessionen. Jag skapade även hit och stand-routes för att kunna göra dessa aktioner på currentHand. Slutligen la jag till routesen getGameResult/getGameStatus, som påminner om varandra i att de främst skriver ut relevant data, men där GameStatus skriver ut vilken hand vars tur det är, istället för huruvida spelet är över eller ej i vilket synliggörs i GameResult.
+    </p>
+    
+    <p>
+        <strong>Allmänt stycke</strong><br>
+        Överlag tycker jag projektet gick väl att genomföra och var uppskattat att få fördjupa sig i. Jag förstår i efterhand beskrivningen i introduktionsvideorna angående att kortspel kan innebära relativt mycket kod. Då jag var inställd på att höja komplexiteten rejält jämfört med mitt Blackjack i kmom03, som var relativt litet och enkelt, tänkte jag initialt att detta borde kunna göras relativt enkelt och med lite kod, men det blev tydligt att kodmängden snabbt ökade i takt med fler avancerade tillägg. Jag är dock nöjd med slutresultatet och tycker kodmängden blev hanterbar och lämplig utifrån exempelvis de 20-40 timmar som föreslogs. De svårare delarna var för mig implementation av datorspelare, samt hantering av regeln blackjack. Sistnämnda krävde även en del inläsning på själva spelet Blackjack i sig, vars regler jag uppenbarligen inte kunde då jag först trodde att 21 poäng alltid var blackjack. Vilket resulterade i en del omstrukturering efter ett tag. Jag tycker avslutningsvis att projektet var lämpligt för kursen, och gav en god repetition av de moment vi gått igenom, inkluderat de många verktyg för testning och kodkvalitet vi använt.
+    </p>
+    
+    <p>
+        <strong>Tankar om kursen</strong><br>
+        Jag är nöjd med kursen, och känner att jag verkligen fått ökade kunskaper om bl a nyttan med model, views och controllers-begreppen, samt om objektorienterad php. Även flera andra lärdomar såklart, och de många återanknytningar som gjordes till tidigare kurser under första året tycker jag gjorde att kursen också knöt ihop första året överlag väl. Det blev mycket uppskattad repetition och några aha-upplevelser av att få återgå till kunskap man till viss del tillgodogjort sig tidigare men som nu fick falla mer på plats. Jag tänker exempelvis på ooc-kursen och webtec-kursen.<br><br>
+        Föreläsningarna har varit utförliga och pedagogiska, det är uppskattat med en mer lekfull teoretisk ”grund” i de föreläsningar som ofta inleder kursmomenten, innan man börjar med det mer praktiska på temat. Även uppgifter har uppmuntrat till lekfullt lärande och kreativitet. Det var även uppskattat att få arbeta vidare med och få se sin webbplats utvecklas under kursens gång, även under projektet.<br><br>
+        Jag kände att de tidigare kursmomenten hängde väl ihop med projektet, det blev viss repetition av tidigare kursmoment, men också anledningar att gå djupare i sin förståelse av det vi gjort och lära sig lite nytt.<br><br>
+        Jag känner inte att jag har några direkta utvecklingsönskemål för kursen idag, den har känts välutformad och som sagt varit uppskattad.<br><br>
+        Jag hade definitivt rekommenderat kursen till en vän/kollega. Mitt kursbetyg blir 9/10.
+    </p>
+    
 
 {% endblock %}
