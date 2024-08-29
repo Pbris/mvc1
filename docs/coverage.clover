@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1724770018">
-  <project timestamp="1724770018">
+<coverage generated="1724846336">
+  <project timestamp="1724846336">
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="7" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="15" coveredelements="15"/>
@@ -17,9 +17,9 @@
       <line num="63" type="method" name="getBlackjackValue" visibility="public" complexity="3" crap="3" count="6"/>
       <line num="65" type="stmt" count="6"/>
       <line num="66" type="stmt" count="6"/>
-      <line num="69" type="stmt" count="6"/>
-      <line num="70" type="stmt" count="4"/>
-      <line num="73" type="stmt" count="4"/>
+      <line num="69" type="stmt" count="5"/>
+      <line num="70" type="stmt" count="5"/>
+      <line num="73" type="stmt" count="3"/>
       <metrics loc="76" ncloc="45" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="15" coveredelements="15"/>
     </file>
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/Card/CardGraphic.php">
@@ -869,8 +869,8 @@
       <line num="54" type="stmt" count="15"/>
       <line num="60" type="method" name="dealInitialCards" visibility="public" complexity="1" crap="1" count="7"/>
       <line num="62" type="stmt" count="7"/>
-      <line num="70" type="method" name="hitHand" visibility="public" complexity="1" crap="1" count="3"/>
-      <line num="72" type="stmt" count="3"/>
+      <line num="70" type="method" name="hitHand" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="72" type="stmt" count="4"/>
       <line num="80" type="method" name="standHand" visibility="public" complexity="1" crap="1" count="4"/>
       <line num="82" type="stmt" count="4"/>
       <line num="88" type="method" name="hitDealer" visibility="public" complexity="1" crap="1" count="2"/>
@@ -923,80 +923,80 @@
       <class name="App\GameProj\BlackjackHandHelperProj" namespace="global">
         <metrics complexity="36" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="57" elements="73" coveredelements="62"/>
       </class>
-      <line num="16" type="method" name="getHandValue" visibility="public" complexity="5" crap="5" count="8"/>
-      <line num="18" type="stmt" count="8"/>
-      <line num="19" type="stmt" count="8"/>
+      <line num="19" type="method" name="getHandValue" visibility="public" complexity="5" crap="5" count="8"/>
       <line num="21" type="stmt" count="8"/>
       <line num="22" type="stmt" count="8"/>
-      <line num="23" type="stmt" count="8"/>
-      <line num="24" type="stmt" count="5"/>
+      <line num="24" type="stmt" count="8"/>
+      <line num="25" type="stmt" count="8"/>
       <line num="26" type="stmt" count="8"/>
+      <line num="27" type="stmt" count="4"/>
       <line num="29" type="stmt" count="8"/>
-      <line num="30" type="stmt" count="3"/>
-      <line num="31" type="stmt" count="3"/>
-      <line num="34" type="stmt" count="8"/>
-      <line num="44" type="method" name="getBustProbability" visibility="public" complexity="9" crap="9.01" count="2"/>
-      <line num="46" type="stmt" count="2"/>
-      <line num="48" type="stmt" count="2"/>
+      <line num="32" type="stmt" count="8"/>
+      <line num="33" type="stmt" count="2"/>
+      <line num="34" type="stmt" count="2"/>
+      <line num="37" type="stmt" count="8"/>
+      <line num="47" type="method" name="getBustProbability" visibility="public" complexity="9" crap="9.01" count="2"/>
       <line num="49" type="stmt" count="2"/>
       <line num="51" type="stmt" count="2"/>
-      <line num="52" type="stmt" count="1"/>
-      <line num="55" type="stmt" count="2"/>
-      <line num="57" type="stmt" count="2"/>
-      <line num="58" type="stmt" count="0"/>
-      <line num="61" type="stmt" count="2"/>
-      <line num="62" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="2"/>
+      <line num="54" type="stmt" count="2"/>
+      <line num="55" type="stmt" count="1"/>
+      <line num="58" type="stmt" count="2"/>
+      <line num="60" type="stmt" count="2"/>
+      <line num="61" type="stmt" count="0"/>
+      <line num="64" type="stmt" count="2"/>
       <line num="65" type="stmt" count="1"/>
-      <line num="66" type="stmt" count="1"/>
       <line num="68" type="stmt" count="1"/>
       <line num="69" type="stmt" count="1"/>
-      <line num="70" type="stmt" count="1"/>
+      <line num="71" type="stmt" count="1"/>
       <line num="72" type="stmt" count="1"/>
       <line num="73" type="stmt" count="1"/>
-      <line num="77" type="stmt" count="1"/>
-      <line num="86" type="method" name="hasBlackjack" visibility="public" complexity="2" crap="2" count="2"/>
-      <line num="88" type="stmt" count="2"/>
-      <line num="97" type="method" name="handHasAce" visibility="private" complexity="3" crap="3" count="3"/>
-      <line num="99" type="stmt" count="3"/>
-      <line num="100" type="stmt" count="3"/>
-      <line num="101" type="stmt" count="2"/>
-      <line num="104" type="stmt" count="1"/>
-      <line num="113" type="method" name="getLowHandValue" visibility="private" complexity="3" crap="3" count="2"/>
-      <line num="115" type="stmt" count="2"/>
-      <line num="116" type="stmt" count="2"/>
-      <line num="117" type="stmt" count="2"/>
-      <line num="118" type="stmt" count="1"/>
-      <line num="119" type="stmt" count="1"/>
-      <line num="122" type="stmt" count="2"/>
-      <line num="124" type="stmt" count="2"/>
-      <line num="135" type="method" name="shouldComputerHit" visibility="public" complexity="5" crap="5.58" count="1"/>
-      <line num="137" type="stmt" count="1"/>
-      <line num="138" type="stmt" count="1"/>
-      <line num="139" type="stmt" count="1"/>
+      <line num="75" type="stmt" count="1"/>
+      <line num="76" type="stmt" count="1"/>
+      <line num="80" type="stmt" count="1"/>
+      <line num="89" type="method" name="hasBlackjack" visibility="public" complexity="2" crap="2" count="2"/>
+      <line num="91" type="stmt" count="2"/>
+      <line num="100" type="method" name="handHasAce" visibility="private" complexity="3" crap="3" count="3"/>
+      <line num="102" type="stmt" count="3"/>
+      <line num="103" type="stmt" count="3"/>
+      <line num="104" type="stmt" count="2"/>
+      <line num="107" type="stmt" count="1"/>
+      <line num="116" type="method" name="getLowHandValue" visibility="private" complexity="3" crap="3" count="2"/>
+      <line num="118" type="stmt" count="2"/>
+      <line num="119" type="stmt" count="2"/>
+      <line num="120" type="stmt" count="2"/>
+      <line num="121" type="stmt" count="1"/>
+      <line num="122" type="stmt" count="1"/>
+      <line num="125" type="stmt" count="2"/>
+      <line num="127" type="stmt" count="2"/>
+      <line num="138" type="method" name="shouldComputerHit" visibility="public" complexity="5" crap="5.58" count="1"/>
+      <line num="140" type="stmt" count="1"/>
       <line num="141" type="stmt" count="1"/>
-      <line num="142" type="stmt" count="1"/>
-      <line num="144" type="stmt" count="0"/>
-      <line num="147" type="stmt" count="0"/>
-      <line num="157" type="method" name="settleBets" visibility="public" complexity="2" crap="2" count="1"/>
-      <line num="159" type="stmt" count="1"/>
-      <line num="160" type="stmt" count="1"/>
-      <line num="161" type="stmt" count="1"/>
+      <line num="142" type="stmt" count="0"/>
+      <line num="144" type="stmt" count="1"/>
+      <line num="145" type="stmt" count="1"/>
+      <line num="147" type="stmt" count="1"/>
+      <line num="150" type="stmt" count="0"/>
+      <line num="160" type="method" name="settleBets" visibility="public" complexity="2" crap="2" count="1"/>
+      <line num="162" type="stmt" count="1"/>
       <line num="163" type="stmt" count="1"/>
       <line num="164" type="stmt" count="1"/>
+      <line num="166" type="stmt" count="1"/>
       <line num="167" type="stmt" count="1"/>
-      <line num="178" type="method" name="settleSingleHandBet" visibility="private" complexity="7" crap="11.60" count="1"/>
-      <line num="180" type="stmt" count="1"/>
-      <line num="181" type="stmt" count="1"/>
+      <line num="170" type="stmt" count="1"/>
+      <line num="181" type="method" name="settleSingleHandBet" visibility="private" complexity="7" crap="11.60" count="1"/>
       <line num="183" type="stmt" count="1"/>
-      <line num="184" type="stmt" count="0"/>
-      <line num="185" type="stmt" count="0"/>
+      <line num="184" type="stmt" count="1"/>
+      <line num="186" type="stmt" count="1"/>
       <line num="187" type="stmt" count="0"/>
-      <line num="190" type="stmt" count="1"/>
-      <line num="191" type="stmt" count="0"/>
-      <line num="194" type="stmt" count="1"/>
-      <line num="195" type="stmt" count="0"/>
-      <line num="198" type="stmt" count="1"/>
-      <metrics loc="201" ncloc="147" classes="1" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="57" elements="73" coveredelements="62"/>
+      <line num="188" type="stmt" count="0"/>
+      <line num="190" type="stmt" count="0"/>
+      <line num="193" type="stmt" count="1"/>
+      <line num="194" type="stmt" count="0"/>
+      <line num="197" type="stmt" count="1"/>
+      <line num="198" type="stmt" count="0"/>
+      <line num="201" type="stmt" count="1"/>
+      <metrics loc="204" ncloc="147" classes="1" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="57" elements="73" coveredelements="62"/>
     </file>
     <file name="/home/pela23/dbwebb-kurser/mvc/me/report/src/GameProj/BlackjackHandManagerProj.php">
       <class name="App\GameProj\BlackjackHandManagerProj" namespace="global">
@@ -1018,12 +1018,12 @@
       <line num="59" type="stmt" count="7"/>
       <line num="60" type="stmt" count="7"/>
       <line num="62" type="stmt" count="7"/>
-      <line num="72" type="method" name="hitHand" visibility="public" complexity="4" crap="4.13" count="3"/>
-      <line num="74" type="stmt" count="3"/>
+      <line num="72" type="method" name="hitHand" visibility="public" complexity="4" crap="4.13" count="4"/>
+      <line num="74" type="stmt" count="4"/>
       <line num="75" type="stmt" count="0"/>
-      <line num="78" type="stmt" count="3"/>
-      <line num="79" type="stmt" count="3"/>
-      <line num="80" type="stmt" count="3"/>
+      <line num="78" type="stmt" count="4"/>
+      <line num="79" type="stmt" count="4"/>
+      <line num="80" type="stmt" count="4"/>
       <line num="90" type="method" name="standHand" visibility="public" complexity="3" crap="3" count="4"/>
       <line num="92" type="stmt" count="4"/>
       <line num="93" type="stmt" count="1"/>
@@ -1069,9 +1069,9 @@
       <line num="239" type="stmt" count="1"/>
       <line num="240" type="stmt" count="1"/>
       <line num="241" type="stmt" count="1"/>
-      <line num="242" type="stmt" count="1"/>
+      <line num="242" type="stmt" count="0"/>
       <line num="244" type="stmt" count="1"/>
-      <line num="247" type="stmt" count="0"/>
+      <line num="247" type="stmt" count="1"/>
       <line num="254" type="method" name="checkForBlackjack" visibility="public" complexity="4" crap="4.13" count="1"/>
       <line num="256" type="stmt" count="1"/>
       <line num="257" type="stmt" count="1"/>
@@ -1141,6 +1141,6 @@
       <line num="15" type="stmt" count="0"/>
       <metrics loc="18" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
     </file>
-    <metrics files="26" loc="2716" ncloc="2217" classes="25" methods="170" coveredmethods="72" conditionals="0" coveredconditionals="0" statements="814" coveredstatements="227" elements="984" coveredelements="299"/>
+    <metrics files="26" loc="2719" ncloc="2217" classes="25" methods="170" coveredmethods="72" conditionals="0" coveredconditionals="0" statements="814" coveredstatements="227" elements="984" coveredelements="299"/>
   </project>
 </coverage>
