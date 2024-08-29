@@ -71,10 +71,8 @@ class BlackjackGameProjStartTest extends TestCase
     {
         $game = new BlackjackGameProj('Player', 1000.00, 1, 10.00);
 
-        // Create a stub for the Card class
         $stub = $this->createMock(Card::class);
 
-        // Configure the stub
         $stub->method('getBlackjackValue')
             ->willReturn(7, 10);
         $stub->method('getValue')
@@ -93,7 +91,6 @@ class BlackjackGameProjStartTest extends TestCase
     {
         $game = new BlackjackGameProj('Player', 1000.00, 1, 10.00);
 
-        // Create stubs for the Card class
         $aceStub = $this->createMock(Card::class);
         $aceStub->method('getBlackjackValue')->willReturn(11);
         $aceStub->method('getValue')->willReturn('Ace');
@@ -104,12 +101,10 @@ class BlackjackGameProjStartTest extends TestCase
 
         $hand = [$aceStub, $sevenStub];
 
-        // Set the mocked hand as the player's hand
         $game->setPlayerHand($hand);
 
         $bustProbability = $game->getBustProbability(0);
 
-        // With Ace-7 (soft 18), bust probability should be 0
         $this->assertEquals(0, $bustProbability);
     }
 
@@ -120,7 +115,6 @@ class BlackjackGameProjStartTest extends TestCase
     {
         $game = new BlackjackGameProj('Player', 1000.00, 1, 10.00);
 
-        // Create stubs for the Card class
         $kingStub = $this->createMock(Card::class);
         $kingStub->method('getBlackjackValue')->willReturn(10);
         $kingStub->method('getValue')->willReturn('King');
@@ -131,7 +125,6 @@ class BlackjackGameProjStartTest extends TestCase
 
         $hand = [$kingStub, $sevenStub];
 
-        // Set the mocked hand as the player's hand
         $game->setPlayerHand($hand);
 
         $bustProbability = $game->getBustProbability(0);
@@ -146,7 +139,6 @@ class BlackjackGameProjStartTest extends TestCase
     {
         $game = new BlackjackGameProj('Player', 1000.00, 2, 10.00, 1, 'smart');
 
-        // Create stubs for the Card class
         $aceStub = $this->createMock(Card::class);
         $aceStub->method('getBlackjackValue')->willReturn(11);
         $aceStub->method('getValue')->willReturn('Ace');
@@ -163,7 +155,6 @@ class BlackjackGameProjStartTest extends TestCase
 
         $game->playComputerHand();
 
-        // Force a bust
         while (!$game->isHandBusted(1)) {
             $game->hitHand(1);
         }
@@ -185,6 +176,6 @@ class BlackjackGameProjStartTest extends TestCase
         $this->assertEquals('standing', $hands[0]['status']);
 
         $this->expectException(\InvalidArgumentException::class);
-        $game->standHand(5); // Invalid hand index
+        $game->standHand(5);
     }
 }

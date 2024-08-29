@@ -98,7 +98,6 @@ class BlackjackGameProjEndTest extends TestCase
     {
         $game = new BlackjackGameProj('Player', 1000.00, 1, 10.00);
 
-        // Create stubs for the Card class
         $aceStub = $this->createMock(Card::class);
         $aceStub->method('getBlackjackValue')->willReturn(11);
         $aceStub->method('getValue')->willReturn('Ace');
